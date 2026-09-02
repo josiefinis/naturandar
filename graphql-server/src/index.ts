@@ -8,53 +8,42 @@ const typeDefs = `#graphql
   # Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
 
   # This "Book" type defines the queryable fields for every book in our data source.
-  type Book {
-    title: String
-    author: String
-  }
   type Observation {
-    date: String
-    place: String
-    subject: String
+    title: String
+    dateObserved: String
+    municipalityId: String
+    habitat: String
+    behaviour: String
   }
 
   # The "Query" type is special: it lists all of the available queries that
   # clients can execute, along with the return type for each. In this
   # case, the "books" query returns an array of zero or more Books (defined above).
   type Query {
-    books: [Book]
     observations: [Observation]
   }
 `;
 
-const books = [
-  {
-    title: "The Awakening",
-    author: "Kate Chopin",
-  },
-  {
-    title: "City of Glass",
-    author: "Paul Auster",
-  },
-];
-
 const observations = [
   {
-    date: "2026-09-01",
-    place: "Grinda",
-    subject: "Mermaid",
+    title: "sjöjungfru",
+    dateObserved: "2026-09-02",
+    municipalityId: "0883",
+    habitat: "strand",
+    behaviour: "simmade i vattnet, såg ut som den sökte någonting",
   },
   {
-    date: "2026-08-03",
-    place: "Sandvik",
-    subject: "Mallman",
+    title: "skogstroll",
+    dateObserved: "2026-08-01",
+    municipalityId: "0882",
+    habitat: "strand",
+    behaviour: "simmade i vattnet, såg ut som den sökte någonting",
   },
 ];
 // Resolvers define how to fetch the types defined in your schema.
 // This resolver retrieves books from the "books" array above.
 const resolvers = {
   Query: {
-    books: () => books,
     observations: () => observations,
   },
 };
