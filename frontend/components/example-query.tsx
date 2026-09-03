@@ -1,16 +1,17 @@
 interface Observation {
   title: string;
-  dateObserved: string;
+  date: string;
   municipalityId: string;
 }
 
 export default async function ExampleQuery() {
   const API_URL = "http://localhost:4000/";
+
   const GET_OBSERVATIONS_QUERY = `
     query GetObservations {
       observations {
         title
-        dateObserved
+        date
         municipalityId
       }
     }
@@ -33,7 +34,7 @@ export default async function ExampleQuery() {
       {observations.map((obs) => (
         <p
           key={obs.title}
-        >{`${obs.title} ${obs.dateObserved} ${obs.municipalityId}`}</p>
+        >{`${obs.title} ${obs.date} ${obs.municipalityId}`}</p>
       ))}
     </div>
   );
