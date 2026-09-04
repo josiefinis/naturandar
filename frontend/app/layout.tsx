@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Amarante, Glass_Antiqua } from "next/font/google";
 import "./globals.css";
+import MainNav from "@/components/main-nav";
 
 const amarante = Amarante({
   variable: "--font-amarante",
@@ -26,6 +27,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${amarante.variable} ${glassAntiqua.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <header>
+          <MainNav />
+        </header>
         <main id="main-content">{children}</main>
       </body>
     </html>
