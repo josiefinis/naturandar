@@ -12,11 +12,18 @@
   --font-display: var(--font-amarante);
   --font-serif: var(--font-glass-antiqua);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --text-fluid-sm: clamp(0.4rem, 0.8cqi + 0.4rem, 2rem);
+  --text-fluid-md: clamp(0.6rem, 1cqi + 0.4rem, 2rem);
+  --text-fluid-lg: clamp(0.8rem, 1.2cqi + 0.4rem, 2rem);
+  --text-fluid-xl: clamp(1rem, 2cqi + 0.4rem, 4rem);
+  --text-fluid-2xl: clamp(1rem, 4cqi + 0.4rem, 8rem);
+  --text-fluid-3xl: clamp(1rem, 6cqi + 0.6rem, 12rem);
+  --text-fluid-4xl: clamp(1rem, 8cqi + 0.8rem, 16rem);
+  --text-fluid-5xl: clamp(2rem, 10cqi + 1rem, 20rem);
+  --text-fluid-6xl: clamp(2rem, 12cqi + 1.2rem, 24rem);
+  --text-fluid-7xl: clamp(2rem, 14cqi + 1.4rem, 28rem);
+  --text-fluid-8xl: clamp(3rem, 16cqi + 1.6rem, 32rem);
+  --text-fluid-9xl: clamp(3rem, 18cqi + 1.8rem, 36rem);
 }
 
 body {
