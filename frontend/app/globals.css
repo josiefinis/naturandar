@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-theme-900: oklch(0.1639 0.0233 24.82);
+  --color-theme-800: oklch(0.2655 0.0605 60.47);
+  --color-theme-700: oklch(0.356 0.0703 67.67);
+  --color-theme-600: oklch(0.3994 0.0732 71.04);
+  --color-theme-500: oklch(0.5484 0.084 66.93);
+  --color-theme-400: oklch(0.5749 0.0752 66.78);
+  --color-theme-300: oklch(0.6338 0.062 69.74);
+  --color-theme-200: oklch(0.7031 0.0673 75.63);
+  --color-accent-red-800: oklch(0.328 0.1161 34.62);
+  --color-accent-red-700: oklch(0.4213 0.1391 34.16);
+  --color-accent-orange: oklch(0.4719 0.1038 67.62);
+  --color-accent-yellow: oklch(0.6044 0.1116 77.82);
+  --color-accent-green-600: oklch(0.4238 0.0466 94.96);
+  --color-accent-green-500: oklch(0.4636 0.0461 94.98);
+  --color-accent-green-450: oklch(0.47 0.0355 88.38);
+  --color-accent-green-200: oklch(0.6625 0.05 89.58);
+
+  --background: var(--color-theme-900);
+  --foreground: var(--color-theme-200);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-theme-900: var(--color-theme-900);
+  --color-theme-800: var(--color-theme-800);
+  --color-theme-700: var(--color-theme-700);
+  --color-theme-600: var(--color-theme-600);
+  --color-theme-500: var(--color-theme-500);
+  --color-theme-400: var(--color-theme-400);
+  --color-theme-300: var(--color-theme-300);
+  --color-theme-200: var(--color-theme-200);
+  --color-accent-red-800: var(--color-accent-red-800);
+  --color-accent-red-700: var(--color-accent-red-700);
+  --color-accent-orange: var(--color-accent-orange);
+  --color-accent-yellow: var(--color-accent-yellow);
+  --color-accent-green-600: var(--color-accent-green-600);
+  --color-accent-green-500: var(--color-accent-green-500);
+  --color-accent-green-450: var(--color-accent-green-450);
+  --color-accent-green-200: var(--color-accent-green-200);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: var(--font-amarante);
+  --font-serif: var(--font-glass-antiqua);
+
+  --text-fluid-sm: clamp(0.4rem, 0.8cqi + 0.4rem, 2rem);
+  --text-fluid-md: clamp(0.6rem, 1cqi + 0.4rem, 2rem);
+  --text-fluid-lg: clamp(0.8rem, 1.2cqi + 0.4rem, 2rem);
+  --text-fluid-xl: clamp(1rem, 2cqi + 0.4rem, 4rem);
+  --text-fluid-2xl: clamp(1rem, 4cqi + 0.4rem, 8rem);
+  --text-fluid-3xl: clamp(1rem, 6cqi + 0.6rem, 12rem);
+  --text-fluid-4xl: clamp(1rem, 8cqi + 0.8rem, 16rem);
+  --text-fluid-5xl: clamp(2rem, 10cqi + 1rem, 20rem);
+  --text-fluid-6xl: clamp(2rem, 12cqi + 1.2rem, 24rem);
+  --text-fluid-7xl: clamp(2rem, 14cqi + 1.4rem, 28rem);
+  --text-fluid-8xl: clamp(3rem, 16cqi + 1.6rem, 32rem);
+  --text-fluid-9xl: clamp(3rem, 18cqi + 1.8rem, 36rem);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-serif), serif;
+}
+
+a:focus-visible {
+  outline: none;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline;
 }
