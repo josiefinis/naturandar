@@ -20,7 +20,7 @@ export default async function Home({
           Naturandar
         </h1>
         <Link
-          className="text-fluid-xl text-theme-200 hover:underline focus-visible:underline"
+          className="text-fluid-xl text-theme-200"
           href="/beskriv-iakttagelse"
         >
           beskriv din iakttagelse
