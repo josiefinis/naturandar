@@ -18,6 +18,7 @@ export interface Observation {
   amount?: number;
   habitat?: string;
   behaviour?: string;
+  image?: string;
   being?: Being;
   municipality?: Municipality;
 }
