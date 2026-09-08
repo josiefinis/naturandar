@@ -2,12 +2,1308 @@
   "observations": [
     {
       "id": 0,
-      "beingId": 20,
-      "date": "2026-09-10",
+      "beingId": 24,
+      "date": "2026-09-10T05:15:00.000Z",
       "municipalityId": "0883",
       "amount": 3,
       "habitat": "strand",
       "behaviour": "simmade i vattnet, såg ut som den sökte någonting"
+    },
+    {
+      "id": 1,
+      "beingId": 9,
+      "date": "2024-08-11T03:12:00.000Z",
+      "municipalityId": "0183",
+      "amount": 3,
+      "habitat": "skog",
+      "behaviour": ""
+    },
+    {
+      "id": 2,
+      "beingId": 36,
+      "date": "2026-07-25T02:22:00.000Z",
+      "municipalityId": "1083",
+      "amount": 1,
+      "habitat": "ängsgranskog",
+      "behaviour": ""
+    },
+    {
+      "id": 3,
+      "beingId": 17,
+      "date": "2023-04-18T16:01:00.000Z",
+      "municipalityId": "0180",
+      "amount": 2,
+      "habitat": "ängsgranskog",
+      "behaviour": ""
+    },
+    {
+      "id": 4,
+      "beingId": 29,
+      "date": "2023-11-19T06:33:00.000Z",
+      "municipalityId": "2523",
+      "amount": 2,
+      "habitat": "sjöbotten",
+      "behaviour": ""
+    },
+    {
+      "id": 5,
+      "beingId": 24,
+      "date": "2025-05-19T17:47:00.000Z",
+      "municipalityId": "0883",
+      "amount": 3,
+      "habitat": "grotta",
+      "behaviour": ""
+    },
+    {
+      "id": 6,
+      "beingId": 8,
+      "date": "2019-06-17T01:12:00.000Z",
+      "municipalityId": "1427",
+      "amount": 2,
+      "habitat": "hed",
+      "behaviour": ""
+    },
+    {
+      "id": 7,
+      "beingId": 0,
+      "date": "2022-03-06T09:32:00.000Z",
+      "municipalityId": "0187",
+      "amount": 3,
+      "habitat": "klippa",
+      "behaviour": ""
+    },
+    {
+      "id": 8,
+      "beingId": 8,
+      "date": "2025-02-10T02:56:00.000Z",
+      "municipalityId": "2313",
+      "amount": 3,
+      "habitat": "fjällbjörkskog",
+      "behaviour": ""
+    },
+    {
+      "id": 9,
+      "beingId": 35,
+      "date": "2019-05-05T23:39:00.000Z",
+      "municipalityId": "0139",
+      "amount": 2,
+      "habitat": "buskmark",
+      "behaviour": ""
+    },
+    {
+      "id": 10,
+      "beingId": 10,
+      "date": "2018-03-02T19:34:00.000Z",
+      "municipalityId": "0330",
+      "amount": 2,
+      "habitat": "våtmark",
+      "behaviour": ""
+    },
+    {
+      "id": 11,
+      "beingId": 14,
+      "date": "2021-02-12T03:53:00.000Z",
+      "municipalityId": "0183",
+      "amount": 2,
+      "habitat": "havsgrotta",
+      "behaviour": ""
+    },
+    {
+      "id": 12,
+      "beingId": 23,
+      "date": "2026-05-23T06:12:00.000Z",
+      "municipalityId": "1497",
+      "amount": 2,
+      "habitat": "skogen",
+      "behaviour": ""
+    },
+    {
+      "id": 13,
+      "beingId": 17,
+      "date": "2023-11-16T08:53:00.000Z",
+      "municipalityId": "0486",
+      "amount": 2,
+      "habitat": "fuktlövskog",
+      "behaviour": ""
+    },
+    {
+      "id": 14,
+      "beingId": 13,
+      "date": "2020-04-16T13:57:00.000Z",
+      "municipalityId": "1267",
+      "amount": 2,
+      "habitat": "snölega",
+      "behaviour": ""
+    },
+    {
+      "id": 15,
+      "beingId": 21,
+      "date": "2018-08-29T14:26:00.000Z",
+      "municipalityId": "2031",
+      "amount": 2,
+      "habitat": "grotta",
+      "behaviour": ""
+    },
+    {
+      "id": 16,
+      "beingId": 22,
+      "date": "2023-03-17T08:46:00.000Z",
+      "municipalityId": "1060",
+      "amount": 1,
+      "habitat": "svämlövskog",
+      "behaviour": ""
+    },
+    {
+      "id": 17,
+      "beingId": 14,
+      "date": "2020-12-19T18:41:00.000Z",
+      "municipalityId": "0382",
+      "amount": 2,
+      "habitat": "fjäll",
+      "behaviour": ""
+    },
+    {
+      "id": 18,
+      "beingId": 17,
+      "date": "2021-07-12T09:30:00.000Z",
+      "municipalityId": "0760",
+      "amount": 3,
+      "habitat": "buskmark",
+      "behaviour": ""
+    },
+    {
+      "id": 19,
+      "beingId": 31,
+      "date": "2024-03-21T13:42:00.000Z",
+      "municipalityId": "2183",
+      "amount": 3,
+      "habitat": "lövskog",
+      "behaviour": ""
+    },
+    {
+      "id": 20,
+      "beingId": 33,
+      "date": "2020-12-01T17:52:00.000Z",
+      "municipalityId": "0580",
+      "amount": 1,
+      "habitat": "hed",
+      "behaviour": ""
+    },
+    {
+      "id": 21,
+      "beingId": 25,
+      "date": "2023-03-07T10:31:00.000Z",
+      "municipalityId": "0017",
+      "amount": 3,
+      "habitat": "svämädellövskog",
+      "behaviour": ""
+    },
+    {
+      "id": 22,
+      "beingId": 34,
+      "date": "2025-12-20T03:17:00.000Z",
+      "municipalityId": "1281",
+      "amount": 3,
+      "habitat": "grotta",
+      "behaviour": ""
+    },
+    {
+      "id": 23,
+      "beingId": 20,
+      "date": "2020-11-11T19:32:00.000Z",
+      "municipalityId": "1461",
+      "amount": 2,
+      "habitat": "källa",
+      "behaviour": ""
+    },
+    {
+      "id": 24,
+      "beingId": 12,
+      "date": "2019-05-19T01:10:00.000Z",
+      "municipalityId": "2560",
+      "amount": 1,
+      "habitat": "agkärr",
+      "behaviour": ""
+    },
+    {
+      "id": 25,
+      "beingId": 36,
+      "date": "2023-07-20T03:09:00.000Z",
+      "municipalityId": "0486",
+      "amount": 1,
+      "habitat": "klippa",
+      "behaviour": ""
+    },
+    {
+      "id": 26,
+      "beingId": 16,
+      "date": "2024-07-10T07:17:00.000Z",
+      "municipalityId": "2422",
+      "amount": 3,
+      "habitat": "våtmark",
+      "behaviour": ""
+    },
+    {
+      "id": 27,
+      "beingId": 37,
+      "date": "2018-09-03T06:23:00.000Z",
+      "municipalityId": "1233",
+      "amount": 1,
+      "habitat": "havsgrotta",
+      "behaviour": ""
+    },
+    {
+      "id": 28,
+      "beingId": 16,
+      "date": "2022-09-13T15:43:00.000Z",
+      "municipalityId": "1447",
+      "amount": 2,
+      "habitat": "ädellöv",
+      "behaviour": ""
+    },
+    {
+      "id": 29,
+      "beingId": 18,
+      "date": "2018-11-16T13:58:00.000Z",
+      "municipalityId": "0003",
+      "amount": 3,
+      "habitat": "fjällen",
+      "behaviour": ""
+    },
+    {
+      "id": 30,
+      "beingId": 23,
+      "date": "2024-01-16T11:10:00.000Z",
+      "municipalityId": "0330",
+      "amount": 3,
+      "habitat": "svämlövskog",
+      "behaviour": ""
+    },
+    {
+      "id": 31,
+      "beingId": 24,
+      "date": "2025-10-22T21:59:00.000Z",
+      "municipalityId": "1293",
+      "amount": 2,
+      "habitat": "lagun",
+      "behaviour": ""
+    },
+    {
+      "id": 32,
+      "beingId": 23,
+      "date": "2024-10-25T12:00:00.000Z",
+      "municipalityId": "1281",
+      "amount": 3,
+      "habitat": "agkärr",
+      "behaviour": ""
+    },
+    {
+      "id": 33,
+      "beingId": 15,
+      "date": "2019-08-15T01:00:00.000Z",
+      "municipalityId": "2380",
+      "amount": 2,
+      "habitat": "källkärr",
+      "behaviour": ""
+    },
+    {
+      "id": 34,
+      "beingId": 25,
+      "date": "2020-12-17T10:56:00.000Z",
+      "municipalityId": "1292",
+      "amount": 2,
+      "habitat": "ädellöv",
+      "behaviour": ""
+    },
+    {
+      "id": 35,
+      "beingId": 28,
+      "date": "2020-07-04T13:25:00.000Z",
+      "municipalityId": "0128",
+      "amount": 3,
+      "habitat": "skogen",
+      "behaviour": ""
+    },
+    {
+      "id": 36,
+      "beingId": 22,
+      "date": "2024-05-29T02:23:00.000Z",
+      "municipalityId": "1419",
+      "amount": 3,
+      "habitat": "fuktlövskog",
+      "behaviour": ""
+    },
+    {
+      "id": 37,
+      "beingId": 11,
+      "date": "2020-09-17T00:36:00.000Z",
+      "municipalityId": "0007",
+      "amount": 2,
+      "habitat": "klippstrand",
+      "behaviour": ""
+    },
+    {
+      "id": 38,
+      "beingId": 32,
+      "date": "2026-08-29T22:34:00.000Z",
+      "municipalityId": "0125",
+      "amount": 2,
+      "habitat": "sjö",
+      "behaviour": ""
+    },
+    {
+      "id": 39,
+      "beingId": 7,
+      "date": "2021-01-07T19:25:00.000Z",
+      "municipalityId": "1472",
+      "amount": 2,
+      "habitat": "fuktlövskog",
+      "behaviour": ""
+    },
+    {
+      "id": 40,
+      "beingId": 7,
+      "date": "2021-04-14T22:11:00.000Z",
+      "municipalityId": "1444",
+      "amount": 2,
+      "habitat": "vik",
+      "behaviour": ""
+    },
+    {
+      "id": 41,
+      "beingId": 2,
+      "date": "2020-03-21T23:21:00.000Z",
+      "municipalityId": "2463",
+      "amount": 3,
+      "habitat": "barrskog",
+      "behaviour": ""
+    },
+    {
+      "id": 42,
+      "beingId": 24,
+      "date": "2023-10-23T10:15:00.000Z",
+      "municipalityId": "1440",
+      "amount": 3,
+      "habitat": "lerstrand",
+      "behaviour": ""
+    },
+    {
+      "id": 43,
+      "beingId": 10,
+      "date": "2024-12-24T19:37:00.000Z",
+      "municipalityId": "0128",
+      "amount": 3,
+      "habitat": "åsbarrskog",
+      "behaviour": ""
+    },
+    {
+      "id": 44,
+      "beingId": 17,
+      "date": "2021-03-11T18:53:00.000Z",
+      "municipalityId": "0024",
+      "amount": 2,
+      "habitat": "lagun",
+      "behaviour": ""
+    },
+    {
+      "id": 45,
+      "beingId": 30,
+      "date": "2023-07-18T04:56:00.000Z",
+      "municipalityId": "1380",
+      "amount": 2,
+      "habitat": "fuktlövskog",
+      "behaviour": ""
+    },
+    {
+      "id": 46,
+      "beingId": 12,
+      "date": "2024-06-18T06:49:00.000Z",
+      "municipalityId": "0665",
+      "amount": 2,
+      "habitat": "fuktlövskog",
+      "behaviour": ""
+    },
+    {
+      "id": 47,
+      "beingId": 33,
+      "date": "2022-07-21T19:19:00.000Z",
+      "municipalityId": "1257",
+      "amount": 2,
+      "habitat": "svämädellövskog",
+      "behaviour": ""
+    },
+    {
+      "id": 48,
+      "beingId": 36,
+      "date": "2024-01-09T09:43:00.000Z",
+      "municipalityId": "0488",
+      "amount": 2,
+      "habitat": "agkärr",
+      "behaviour": ""
+    },
+    {
+      "id": 49,
+      "beingId": 21,
+      "date": "2020-10-21T10:40:00.000Z",
+      "municipalityId": "1473",
+      "amount": 3,
+      "habitat": "små öar",
+      "behaviour": ""
+    },
+    {
+      "id": 50,
+      "beingId": 38,
+      "date": "2026-04-15T17:05:00.000Z",
+      "municipalityId": "1261",
+      "amount": 1,
+      "habitat": "kärr",
+      "behaviour": ""
+    },
+    {
+      "id": 51,
+      "beingId": 27,
+      "date": "2024-01-06T01:58:00.000Z",
+      "municipalityId": "0765",
+      "amount": 2,
+      "habitat": "ädellöv",
+      "behaviour": ""
+    },
+    {
+      "id": 52,
+      "beingId": 23,
+      "date": "2026-08-14T16:12:00.000Z",
+      "municipalityId": "0561",
+      "amount": 3,
+      "habitat": "åsbarrskog",
+      "behaviour": ""
+    },
+    {
+      "id": 53,
+      "beingId": 29,
+      "date": "2018-07-15T09:38:00.000Z",
+      "municipalityId": "1961",
+      "amount": 2,
+      "habitat": "ädellöv",
+      "behaviour": ""
+    },
+    {
+      "id": 54,
+      "beingId": 22,
+      "date": "2021-12-15T20:16:00.000Z",
+      "municipalityId": "1281",
+      "amount": 3,
+      "habitat": "vik",
+      "behaviour": ""
+    },
+    {
+      "id": 55,
+      "beingId": 4,
+      "date": "2018-01-12T01:54:00.000Z",
+      "municipalityId": "2280",
+      "amount": 2,
+      "habitat": "rasmark",
+      "behaviour": ""
+    },
+    {
+      "id": 56,
+      "beingId": 34,
+      "date": "2018-01-04T18:03:00.000Z",
+      "municipalityId": "0117",
+      "amount": 1,
+      "habitat": "lövsumpskog",
+      "behaviour": ""
+    },
+    {
+      "id": 57,
+      "beingId": 4,
+      "date": "2018-07-17T02:00:00.000Z",
+      "municipalityId": "0980",
+      "amount": 2,
+      "habitat": "mossa",
+      "behaviour": ""
+    },
+    {
+      "id": 58,
+      "beingId": 32,
+      "date": "2025-11-22T05:03:00.000Z",
+      "municipalityId": "1282",
+      "amount": 2,
+      "habitat": "klippstrand",
+      "behaviour": ""
+    },
+    {
+      "id": 59,
+      "beingId": 36,
+      "date": "2025-12-22T08:47:00.000Z",
+      "municipalityId": "0685",
+      "amount": 3,
+      "habitat": "fjällen",
+      "behaviour": ""
+    },
+    {
+      "id": 60,
+      "beingId": 38,
+      "date": "2025-12-31T13:19:00.000Z",
+      "municipalityId": "0561",
+      "amount": 2,
+      "habitat": "klippstrand",
+      "behaviour": ""
+    },
+    {
+      "id": 61,
+      "beingId": 14,
+      "date": "2018-10-21T21:09:00.000Z",
+      "municipalityId": "2084",
+      "amount": 1,
+      "habitat": "klippstrand",
+      "behaviour": ""
+    },
+    {
+      "id": 62,
+      "beingId": 34,
+      "date": "2023-10-29T23:07:00.000Z",
+      "municipalityId": "1494",
+      "amount": 2,
+      "habitat": "mossa",
+      "behaviour": ""
+    },
+    {
+      "id": 63,
+      "beingId": 28,
+      "date": "2025-10-27T05:56:00.000Z",
+      "municipalityId": "0481",
+      "amount": 2,
+      "habitat": "sjöbotten",
+      "behaviour": ""
+    },
+    {
+      "id": 64,
+      "beingId": 37,
+      "date": "2023-05-07T21:31:00.000Z",
+      "municipalityId": "0114",
+      "amount": 3,
+      "habitat": "fjällen",
+      "behaviour": ""
+    },
+    {
+      "id": 65,
+      "beingId": 18,
+      "date": "2023-05-22T20:45:00.000Z",
+      "municipalityId": "0120",
+      "amount": 2,
+      "habitat": "mossa",
+      "behaviour": ""
+    },
+    {
+      "id": 66,
+      "beingId": 21,
+      "date": "2025-03-08T21:45:00.000Z",
+      "municipalityId": "1293",
+      "amount": 2,
+      "habitat": "rasmark",
+      "behaviour": ""
+    },
+    {
+      "id": 67,
+      "beingId": 34,
+      "date": "2020-09-09T04:31:00.000Z",
+      "municipalityId": "0191",
+      "amount": 3,
+      "habitat": "klippa",
+      "behaviour": ""
+    },
+    {
+      "id": 68,
+      "beingId": 27,
+      "date": "2021-10-18T12:50:00.000Z",
+      "municipalityId": "1883",
+      "amount": 2,
+      "habitat": "sjöbotten",
+      "behaviour": ""
+    },
+    {
+      "id": 69,
+      "beingId": 12,
+      "date": "2024-05-21T14:18:00.000Z",
+      "municipalityId": "2403",
+      "amount": 2,
+      "habitat": "hed",
+      "behaviour": ""
+    },
+    {
+      "id": 70,
+      "beingId": 2,
+      "date": "2025-09-10T18:35:00.000Z",
+      "municipalityId": "1421",
+      "amount": 2,
+      "habitat": "myr",
+      "behaviour": ""
+    },
+    {
+      "id": 71,
+      "beingId": 25,
+      "date": "2018-09-19T17:57:00.000Z",
+      "municipalityId": "2514",
+      "amount": 2,
+      "habitat": "lövsumpskog",
+      "behaviour": ""
+    },
+    {
+      "id": 72,
+      "beingId": 6,
+      "date": "2021-06-14T18:35:00.000Z",
+      "municipalityId": "0380",
+      "amount": 2,
+      "habitat": "havsgrotta",
+      "behaviour": ""
+    },
+    {
+      "id": 73,
+      "beingId": 21,
+      "date": "2025-02-01T11:23:00.000Z",
+      "municipalityId": "1430",
+      "amount": 2,
+      "habitat": "glaciär",
+      "behaviour": ""
+    },
+    {
+      "id": 74,
+      "beingId": 12,
+      "date": "2024-12-05T19:56:00.000Z",
+      "municipalityId": "1492",
+      "amount": 2,
+      "habitat": "havsgrotta",
+      "behaviour": ""
+    },
+    {
+      "id": 75,
+      "beingId": 14,
+      "date": "2020-03-03T14:48:00.000Z",
+      "municipalityId": "2506",
+      "amount": 1,
+      "habitat": "lerstrand",
+      "behaviour": ""
+    },
+    {
+      "id": 76,
+      "beingId": 12,
+      "date": "2019-07-25T06:14:00.000Z",
+      "municipalityId": "0484",
+      "amount": 1,
+      "habitat": "fjällbjörkskog",
+      "behaviour": ""
+    },
+    {
+      "id": 77,
+      "beingId": 14,
+      "date": "2020-07-13T09:48:00.000Z",
+      "municipalityId": "1715",
+      "amount": 2,
+      "habitat": "sandstrand",
+      "behaviour": ""
+    },
+    {
+      "id": 78,
+      "beingId": 3,
+      "date": "2024-10-10T14:43:00.000Z",
+      "municipalityId": "0860",
+      "amount": 2,
+      "habitat": "fuktlövskog",
+      "behaviour": ""
+    },
+    {
+      "id": 79,
+      "beingId": 32,
+      "date": "2024-06-23T11:42:00.000Z",
+      "municipalityId": "0482",
+      "amount": 3,
+      "habitat": "fjäll",
+      "behaviour": ""
+    },
+    {
+      "id": 80,
+      "beingId": 24,
+      "date": "2019-04-15T00:21:00.000Z",
+      "municipalityId": "1883",
+      "amount": 3,
+      "habitat": "sjö",
+      "behaviour": ""
+    },
+    {
+      "id": 81,
+      "beingId": 15,
+      "date": "2020-01-20T22:01:00.000Z",
+      "municipalityId": "1284",
+      "amount": 3,
+      "habitat": "snölega",
+      "behaviour": ""
+    },
+    {
+      "id": 82,
+      "beingId": 36,
+      "date": "2019-07-05T00:11:00.000Z",
+      "municipalityId": "1493",
+      "amount": 2,
+      "habitat": "ädellöv",
+      "behaviour": ""
+    },
+    {
+      "id": 83,
+      "beingId": 0,
+      "date": "2019-11-04T23:36:00.000Z",
+      "municipalityId": "1460",
+      "amount": 1,
+      "habitat": "ekskog",
+      "behaviour": ""
+    },
+    {
+      "id": 84,
+      "beingId": 9,
+      "date": "2021-03-25T04:51:00.000Z",
+      "municipalityId": "2514",
+      "amount": 2,
+      "habitat": "mossa",
+      "behaviour": ""
+    },
+    {
+      "id": 85,
+      "beingId": 31,
+      "date": "2023-11-27T06:25:00.000Z",
+      "municipalityId": "1814",
+      "amount": 3,
+      "habitat": "äng",
+      "behaviour": ""
+    },
+    {
+      "id": 86,
+      "beingId": 14,
+      "date": "2023-02-05T18:04:00.000Z",
+      "municipalityId": "1266",
+      "amount": 2,
+      "habitat": "snölega",
+      "behaviour": ""
+    },
+    {
+      "id": 87,
+      "beingId": 33,
+      "date": "2022-12-22T05:02:00.000Z",
+      "municipalityId": "0881",
+      "amount": 2,
+      "habitat": "fjällen",
+      "behaviour": ""
+    },
+    {
+      "id": 88,
+      "beingId": 5,
+      "date": "2025-08-12T01:59:00.000Z",
+      "municipalityId": "1981",
+      "amount": 2,
+      "habitat": "svämädellövskog",
+      "behaviour": ""
+    },
+    {
+      "id": 89,
+      "beingId": 33,
+      "date": "2021-05-23T20:57:00.000Z",
+      "municipalityId": "0763",
+      "amount": 1,
+      "habitat": "lagun",
+      "behaviour": ""
+    },
+    {
+      "id": 90,
+      "beingId": 18,
+      "date": "2026-02-02T00:02:00.000Z",
+      "municipalityId": "1883",
+      "amount": 2,
+      "habitat": "ängsgranskog",
+      "behaviour": ""
+    },
+    {
+      "id": 91,
+      "beingId": 15,
+      "date": "2020-02-09T10:33:00.000Z",
+      "municipalityId": "0481",
+      "amount": 2,
+      "habitat": "agkärr",
+      "behaviour": ""
+    },
+    {
+      "id": 92,
+      "beingId": 7,
+      "date": "2026-08-10T04:20:00.000Z",
+      "municipalityId": "0008",
+      "amount": 2,
+      "habitat": "ängsgranskog",
+      "behaviour": ""
+    },
+    {
+      "id": 93,
+      "beingId": 32,
+      "date": "2023-01-30T14:37:00.000Z",
+      "municipalityId": "0686",
+      "amount": 2,
+      "habitat": "lövsumpskog",
+      "behaviour": ""
+    },
+    {
+      "id": 94,
+      "beingId": 12,
+      "date": "2021-09-04T18:29:00.000Z",
+      "municipalityId": "0764",
+      "amount": 1,
+      "habitat": "svämlövskog",
+      "behaviour": ""
+    },
+    {
+      "id": 95,
+      "beingId": 31,
+      "date": "2018-02-17T09:41:00.000Z",
+      "municipalityId": "1481",
+      "amount": 3,
+      "habitat": "myr",
+      "behaviour": ""
+    },
+    {
+      "id": 96,
+      "beingId": 6,
+      "date": "2025-12-06T05:47:00.000Z",
+      "municipalityId": "1461",
+      "amount": 1,
+      "habitat": "glaciär",
+      "behaviour": ""
+    },
+    {
+      "id": 97,
+      "beingId": 31,
+      "date": "2022-04-16T19:08:00.000Z",
+      "municipalityId": "1960",
+      "amount": 2,
+      "habitat": "sandstrand",
+      "behaviour": ""
+    },
+    {
+      "id": 98,
+      "beingId": 27,
+      "date": "2020-06-06T23:02:00.000Z",
+      "municipalityId": "0861",
+      "amount": 1,
+      "habitat": "svämlövskog",
+      "behaviour": ""
+    },
+    {
+      "id": 99,
+      "beingId": 24,
+      "date": "2019-12-24T10:12:00.000Z",
+      "municipalityId": "0020",
+      "amount": 2,
+      "habitat": "svämädellövskog",
+      "behaviour": ""
+    },
+    {
+      "id": 100,
+      "beingId": 35,
+      "date": "2020-06-11T04:02:00.000Z",
+      "municipalityId": "1480",
+      "amount": 3,
+      "habitat": "kärr",
+      "behaviour": ""
+    },
+    {
+      "id": 101,
+      "beingId": 1,
+      "date": "2020-08-05T09:09:00.000Z",
+      "municipalityId": "1275",
+      "amount": 2,
+      "habitat": "rasmark",
+      "behaviour": ""
+    },
+    {
+      "id": 102,
+      "beingId": 23,
+      "date": "2026-07-02T20:17:00.000Z",
+      "municipalityId": "1230",
+      "amount": 3,
+      "habitat": "klippstrand",
+      "behaviour": ""
+    },
+    {
+      "id": 103,
+      "beingId": 22,
+      "date": "2018-12-13T22:42:00.000Z",
+      "municipalityId": "1460",
+      "amount": 1,
+      "habitat": "fjällbjörkskog",
+      "behaviour": ""
+    },
+    {
+      "id": 104,
+      "beingId": 20,
+      "date": "2026-01-01T06:28:00.000Z",
+      "municipalityId": "1497",
+      "amount": 2,
+      "habitat": "lagun",
+      "behaviour": ""
+    },
+    {
+      "id": 105,
+      "beingId": 4,
+      "date": "2026-06-29T16:07:00.000Z",
+      "municipalityId": "1407",
+      "amount": 2,
+      "habitat": "buskmark",
+      "behaviour": ""
+    },
+    {
+      "id": 106,
+      "beingId": 15,
+      "date": "2025-11-10T01:36:00.000Z",
+      "municipalityId": "1280",
+      "amount": 2,
+      "habitat": "svämlövskog",
+      "behaviour": ""
+    },
+    {
+      "id": 107,
+      "beingId": 11,
+      "date": "2023-04-30T08:17:00.000Z",
+      "municipalityId": "1291",
+      "amount": 3,
+      "habitat": "sjöbotten",
+      "behaviour": ""
+    },
+    {
+      "id": 108,
+      "beingId": 15,
+      "date": "2023-02-19T02:16:00.000Z",
+      "municipalityId": "1272",
+      "amount": 2,
+      "habitat": "glaciär",
+      "behaviour": ""
+    },
+    {
+      "id": 109,
+      "beingId": 18,
+      "date": "2024-12-16T04:19:00.000Z",
+      "municipalityId": "2480",
+      "amount": 1,
+      "habitat": "ekskog",
+      "behaviour": ""
+    },
+    {
+      "id": 110,
+      "beingId": 29,
+      "date": "2026-02-07T20:49:00.000Z",
+      "municipalityId": "1447",
+      "amount": 2,
+      "habitat": "små öar",
+      "behaviour": ""
+    },
+    {
+      "id": 111,
+      "beingId": 16,
+      "date": "2023-07-11T12:21:00.000Z",
+      "municipalityId": "0018",
+      "amount": 2,
+      "habitat": "klippa",
+      "behaviour": ""
+    },
+    {
+      "id": 112,
+      "beingId": 37,
+      "date": "2019-08-12T00:56:00.000Z",
+      "municipalityId": "1481",
+      "amount": 3,
+      "habitat": "klippstrand",
+      "behaviour": ""
+    },
+    {
+      "id": 113,
+      "beingId": 7,
+      "date": "2023-08-20T22:47:00.000Z",
+      "municipalityId": "2418",
+      "amount": 2,
+      "habitat": "klippa",
+      "behaviour": ""
+    },
+    {
+      "id": 114,
+      "beingId": 6,
+      "date": "2025-04-20T04:45:00.000Z",
+      "municipalityId": "1082",
+      "amount": 2,
+      "habitat": "skogen",
+      "behaviour": ""
+    },
+    {
+      "id": 115,
+      "beingId": 33,
+      "date": "2022-12-22T22:30:00.000Z",
+      "municipalityId": "0685",
+      "amount": 2,
+      "habitat": "grotta",
+      "behaviour": ""
+    },
+    {
+      "id": 116,
+      "beingId": 27,
+      "date": "2021-05-11T10:47:00.000Z",
+      "municipalityId": "2281",
+      "amount": 1,
+      "habitat": "kärr",
+      "behaviour": ""
+    },
+    {
+      "id": 117,
+      "beingId": 13,
+      "date": "2024-10-10T00:40:00.000Z",
+      "municipalityId": "1764",
+      "amount": 2,
+      "habitat": "svämädellövskog",
+      "behaviour": ""
+    },
+    {
+      "id": 118,
+      "beingId": 29,
+      "date": "2025-11-21T11:18:00.000Z",
+      "municipalityId": "2380",
+      "amount": 2,
+      "habitat": "sjö",
+      "behaviour": ""
+    },
+    {
+      "id": 119,
+      "beingId": 3,
+      "date": "2018-08-03T13:58:00.000Z",
+      "municipalityId": "1493",
+      "amount": 2,
+      "habitat": "havsgrotta",
+      "behaviour": ""
+    },
+    {
+      "id": 120,
+      "beingId": 20,
+      "date": "2025-06-11T02:00:00.000Z",
+      "municipalityId": "2021",
+      "amount": 3,
+      "habitat": "snölega",
+      "behaviour": ""
+    },
+    {
+      "id": 121,
+      "beingId": 6,
+      "date": "2024-12-10T02:16:00.000Z",
+      "municipalityId": "1283",
+      "amount": 2,
+      "habitat": "skog",
+      "behaviour": ""
+    },
+    {
+      "id": 122,
+      "beingId": 13,
+      "date": "2018-02-17T10:17:00.000Z",
+      "municipalityId": "2361",
+      "amount": 2,
+      "habitat": "klippstrand",
+      "behaviour": ""
+    },
+    {
+      "id": 123,
+      "beingId": 27,
+      "date": "2024-12-09T01:51:00.000Z",
+      "municipalityId": "0001",
+      "amount": 2,
+      "habitat": "sjö",
+      "behaviour": ""
+    },
+    {
+      "id": 124,
+      "beingId": 14,
+      "date": "2021-08-29T16:16:00.000Z",
+      "municipalityId": "1260",
+      "amount": 2,
+      "habitat": "äng",
+      "behaviour": ""
+    },
+    {
+      "id": 125,
+      "beingId": 2,
+      "date": "2022-09-04T18:30:00.000Z",
+      "municipalityId": "2401",
+      "amount": 2,
+      "habitat": "ädellöv",
+      "behaviour": ""
+    },
+    {
+      "id": 126,
+      "beingId": 26,
+      "date": "2025-05-23T12:48:00.000Z",
+      "municipalityId": "0020",
+      "amount": 3,
+      "habitat": "ädellöv",
+      "behaviour": ""
+    },
+    {
+      "id": 127,
+      "beingId": 39,
+      "date": "2025-02-06T02:10:00.000Z",
+      "municipalityId": "0117",
+      "amount": 2,
+      "habitat": "lagun",
+      "behaviour": ""
+    },
+    {
+      "id": 128,
+      "beingId": 20,
+      "date": "2023-06-25T16:16:00.000Z",
+      "municipalityId": "2313",
+      "amount": 1,
+      "habitat": "sjöstrand",
+      "behaviour": ""
+    },
+    {
+      "id": 129,
+      "beingId": 21,
+      "date": "2025-07-15T21:46:00.000Z",
+      "municipalityId": "1730",
+      "amount": 3,
+      "habitat": "agkärr",
+      "behaviour": ""
+    },
+    {
+      "id": 130,
+      "beingId": 32,
+      "date": "2022-06-22T16:40:00.000Z",
+      "municipalityId": "2505",
+      "amount": 1,
+      "habitat": "tallskog",
+      "behaviour": ""
+    },
+    {
+      "id": 131,
+      "beingId": 16,
+      "date": "2021-06-19T07:43:00.000Z",
+      "municipalityId": "1267",
+      "amount": 2,
+      "habitat": "hed",
+      "behaviour": ""
+    },
+    {
+      "id": 132,
+      "beingId": 15,
+      "date": "2020-02-25T13:47:00.000Z",
+      "municipalityId": "1283",
+      "amount": 1,
+      "habitat": "lerstrand",
+      "behaviour": ""
+    },
+    {
+      "id": 133,
+      "beingId": 23,
+      "date": "2023-02-14T03:29:00.000Z",
+      "municipalityId": "2183",
+      "amount": 2,
+      "habitat": "tallskog",
+      "behaviour": ""
+    },
+    {
+      "id": 134,
+      "beingId": 9,
+      "date": "2018-12-16T03:09:00.000Z",
+      "municipalityId": "1764",
+      "amount": 2,
+      "habitat": "våtmark",
+      "behaviour": ""
+    },
+    {
+      "id": 135,
+      "beingId": 13,
+      "date": "2021-06-13T23:51:00.000Z",
+      "municipalityId": "1380",
+      "amount": 1,
+      "habitat": "fuktlövskog",
+      "behaviour": ""
+    },
+    {
+      "id": 136,
+      "beingId": 7,
+      "date": "2025-08-23T19:47:00.000Z",
+      "municipalityId": "1266",
+      "amount": 2,
+      "habitat": "agkärr",
+      "behaviour": ""
+    },
+    {
+      "id": 137,
+      "beingId": 39,
+      "date": "2021-03-26T23:26:00.000Z",
+      "municipalityId": "1267",
+      "amount": 2,
+      "habitat": "lerstrand",
+      "behaviour": ""
+    },
+    {
+      "id": 138,
+      "beingId": 23,
+      "date": "2022-08-31T21:05:00.000Z",
+      "municipalityId": "0191",
+      "amount": 2,
+      "habitat": "klippa",
+      "behaviour": ""
+    },
+    {
+      "id": 139,
+      "beingId": 21,
+      "date": "2019-12-17T15:31:00.000Z",
+      "municipalityId": "0821",
+      "amount": 3,
+      "habitat": "små öar",
+      "behaviour": ""
+    },
+    {
+      "id": 140,
+      "beingId": 9,
+      "date": "2021-08-03T16:12:00.000Z",
+      "municipalityId": "0138",
+      "amount": 3,
+      "habitat": "svämädellövskog",
+      "behaviour": ""
+    },
+    {
+      "id": 141,
+      "beingId": 17,
+      "date": "2020-05-13T09:08:00.000Z",
+      "municipalityId": "1781",
+      "amount": 2,
+      "habitat": "sjöbotten",
+      "behaviour": ""
+    },
+    {
+      "id": 142,
+      "beingId": 0,
+      "date": "2018-12-09T11:53:00.000Z",
+      "municipalityId": "2104",
+      "amount": 2,
+      "habitat": "källa",
+      "behaviour": ""
+    },
+    {
+      "id": 143,
+      "beingId": 19,
+      "date": "2021-12-01T19:44:00.000Z",
+      "municipalityId": "0562",
+      "amount": 2,
+      "habitat": "fjäll",
+      "behaviour": ""
+    },
+    {
+      "id": 144,
+      "beingId": 30,
+      "date": "2023-07-27T18:47:00.000Z",
+      "municipalityId": "0126",
+      "amount": 2,
+      "habitat": "fjällbjörkskog",
+      "behaviour": ""
     }
   ],
   "beings": [
