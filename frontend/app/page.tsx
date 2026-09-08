@@ -1,9 +1,9 @@
-import ExampleQuery from "@/components/example-query";
 import Pagination from "@/components/pagination";
 import { createUrlSearchParams } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
 import chrysanthemes from "@/public/auriol-chrysanthemes.png";
+import { getObservations } from "@/lib/api";
 
 export default async function Home({
   searchParams,
@@ -11,7 +11,10 @@ export default async function Home({
   searchParams: Promise<{ [key: string]: string | undefined }>;
 }) {
   const query = createUrlSearchParams(await searchParams);
-  const last = 10;
+  const { observations, pages } = await getObservations({
+    expand: ["being", "municipality"],
+  });
+  console.log(observations);
 
   return (
     <div className="relative min-block-svh">
@@ -34,9 +37,13 @@ export default async function Home({
         fill
       />
       <section>
-        <ExampleQuery />
+        {observations.map((obs) => (
+          <p
+            key={obs.id}
+          >{`${obs.being?.title} ${obs.date} ${obs.municipality?.title}`}</p>
+        ))}
         <div className="min-block-svh"></div>
-        <Pagination query={query} last={last} />
+        <Pagination query={query} last={pages} />
       </section>
     </div>
   );
