@@ -1,7 +1,7 @@
 import { ApiError } from "./errors";
 import { Being, Municipality, ObservationsResponse } from "@/lib/types";
 const API_URL = "http://localhost:4000";
-const DEFAULT_LIMIT = "7";
+const DEFAULT_LIMIT = "8";
 
 async function queryApi<T>(
   endpoint: string,

@@ -4,21 +4,25 @@ import Link from "next/link";
 import Image from "next/image";
 import chrysanthemes from "@/public/auriol-chrysanthemes.png";
 import { getObservations } from "@/lib/api";
+import ObservationCard from "@/components/observation-card";
 
 export default async function Home({
   searchParams,
 }: {
   searchParams: Promise<{ [key: string]: string | undefined }>;
 }) {
-  const query = createUrlSearchParams(await searchParams);
+  const params = await searchParams;
+  const query = createUrlSearchParams(params);
+  const { page } = params;
   const { observations, pages } = await getObservations({
+    page: page,
     expand: ["being", "municipality"],
   });
   console.log(observations);
 
   return (
-    <div className="relative min-block-svh">
-      <header className="relative mx-4 ">
+    <div className="relative min-block-svh ">
+      <header className="relative mx-fluid">
         <h1 className="font-display text-fluid-4xl text-accent-yellow">
           Naturandar
         </h1>
@@ -36,13 +40,12 @@ export default async function Home({
         loading="eager"
         fill
       />
-      <section>
-        {observations.map((obs) => (
-          <p
-            key={obs.id}
-          >{`${obs.being?.title} ${obs.date} ${obs.municipality?.title}`}</p>
-        ))}
-        <div className="min-block-svh"></div>
+      <section className="mx-fluid-xl">
+        <div className="min-block-svh grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16 my-16">
+          {observations.map((obs) => (
+            <ObservationCard key={obs.id} observation={obs} />
+          ))}
+        </div>
         <Pagination query={query} last={pages} />
       </section>
     </div>
