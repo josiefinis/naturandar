@@ -32,6 +32,7 @@ interface GetObservationsOptions {
   [key: string]: string | string[] | number | boolean | undefined;
 }
 
+// With help from https://github.com/Robert-Lexicon/projekt-agila-metoder-exempel/blob/main/lib/api.ts
 export async function getObservations(
   options: GetObservationsOptions = {},
 ): Promise<ObservationsResponse> {
@@ -39,18 +40,19 @@ export async function getObservations(
     _limit: DEFAULT_LIMIT,
   });
 
-  Object.entries(options).map((entry) => {
-    let [key, value] = entry;
-    if (["page", "limit", "sort", "order", "expand"].includes(key)) {
-      key = `_${key}`;
-    }
-    if (Array.isArray(value)) {
-      value.forEach((v) => query.append(key, v));
-    } else if (value) {
-      query.set(key, value.toString());
+  Object.entries(options).forEach((entry) => {
+    const [key, value] = entry;
+    if (value !== "" && value !== undefined) {
+      const apiKey = ["page", "limit", "sort", "order", "expand"].includes(key)
+        ? `_${key}`
+        : key;
+      if (Array.isArray(value)) {
+        value.forEach((v) => query.append(apiKey, String(v)));
+      } else {
+        query.set(apiKey, String(value));
+      }
     }
   });
 
-  console.log(query);
   return queryApi("observations", query);
 }
