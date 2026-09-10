@@ -65,13 +65,35 @@ body {
   font-family: var(--font-serif), serif;
 }
 
-a:focus-visible {
-  outline: none;
-  text-decoration: underline;
+.link {
+  &:focus-visible {
+    outline: none;
+    text-decoration: underline;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-a:hover {
-  text-decoration: underline;
+.button {
+  &:hover {
+    background-color: var(--color-accent-orange);
+  }
+  &:focus-visible {
+    background-color: var(--color-accent-orange);
+    outline: none;
+  }
+}
+
+.input {
+  &:hover {
+    background-color: var(--color-theme-200);
+    outline: 2px solid var(--color-accent-orange);
+  }
+  &:focus-visible {
+    background-color: var(--color-theme-200);
+    outline: 2px solid var(--color-accent-orange);
+  }
 }
 
 .mx-fluid {

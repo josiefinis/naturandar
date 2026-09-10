@@ -7,7 +7,7 @@ async function queryApi<T>(
   endpoint: string,
   query?: URLSearchParams,
 ): Promise<T> {
-  const url = `${API_URL}/${endpoint}${query && `?${query.toString()}`}`;
+  const url = `${API_URL}/${endpoint}${query ? `?${query.toString()}` : ""}`;
   const res = await fetch(url);
   if (!res.ok) {
     const context = { status: res.status, url: res.url };

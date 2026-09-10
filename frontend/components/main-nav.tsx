@@ -12,7 +12,7 @@ export default function MainNav() {
   return (
     <nav className="flex justify-center gap-4 md:gap-12 items-center block-min | font-serif text-fluid-xl text-theme-900 bg-theme-200 ">
       {navLinks.map((link) => (
-        <Link key={link.href} href={link.href}>
+        <Link className="link" key={link.href} href={link.href}>
           {link.label}
         </Link>
       ))}
