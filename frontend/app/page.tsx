@@ -18,7 +18,6 @@ export default async function Home({
     page: page,
     expand: ["being", "municipality"],
   });
-  console.log(observations);
 
   return (
     <div className="relative min-block-svh ">
