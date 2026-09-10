@@ -1,6 +1,8 @@
+import { createObservationAction } from "@/app/iakttagelser/actions";
 import { getBeings, getMunicipalities } from "@/lib/api";
 import type { Being, Municipality } from "@/lib/types";
 import Link from "next/link";
+import SubmitButton from "./submit-button";
 
 export default async function AddObservationForm() {
   const groupStyle = "flex flex-col";
@@ -10,7 +12,10 @@ export default async function AddObservationForm() {
   const municipalities: Municipality[] = await getMunicipalities();
 
   return (
-    <form className="flex flex-col gap-8 bg-theme-300 text-theme-900 text-fluid-xl m-8 p-8 border border-theme-500 rounded-lg shadow-xl">
+    <form
+      className="flex flex-col gap-8 bg-theme-300 text-theme-900 text-fluid-xl m-8 p-8 border border-theme-500 rounded-lg shadow-xl"
+      action={createObservationAction}
+    >
       <div className={groupStyle}>
         <label htmlFor="being" className={labelStyle}>
           Väsen
@@ -80,7 +85,7 @@ export default async function AddObservationForm() {
         <label htmlFor="behaviour" className={labelStyle}>
           Beteende
         </label>
-        <textarea className={inputStyle} id="behaviour" name="beteende" />
+        <textarea className={inputStyle} id="behaviour" name="behaviour" />
       </div>
       <div className="grid grid-cols-2 gap-4">
         <Link
@@ -89,9 +94,7 @@ export default async function AddObservationForm() {
         >
           Avbryt
         </Link>
-        <button className="button text-center border-2 border-theme-900/20 rounded-lg ">
-          Skicka
-        </button>
+        <SubmitButton className="button text-center border-2 border-theme-900/20 rounded-lg" />
       </div>
     </form>
   );
