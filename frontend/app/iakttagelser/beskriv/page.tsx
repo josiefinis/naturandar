@@ -2,7 +2,7 @@ import Image from "next/image";
 import plume from "@/public/plume.jpg";
 import AddObservationForm from "@/components/add-observation-form";
 
-export default function BeskrivIakttagelsePage() {
+export default function BeskrivPage() {
   return (
     <div className="relative">
       <Image

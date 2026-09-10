@@ -27,7 +27,7 @@ export default async function Home({
         </h1>
         <Link
           className="link text-fluid-xl text-theme-200"
-          href="/beskriv-iakttagelse"
+          href="/iakttagelser/beskriv"
         >
           beskriv din iakttagelse
         </Link>
