@@ -27,7 +27,7 @@ export default async function Home({
           Naturandar
         </h1>
         <Link
-          className="text-fluid-xl text-theme-200"
+          className="link text-fluid-xl text-theme-200"
           href="/beskriv-iakttagelse"
         >
           beskriv din iakttagelse
