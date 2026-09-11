@@ -1,8 +1,9 @@
 import Image from "next/image";
 import plume from "@/public/plume.jpg";
 import AddObservationForm from "@/components/add-observation-form";
+import { getBeings, getMunicipalities } from "@/lib/api";
 
-export default function BeskrivPage() {
+export default async function BeskrivPage() {
   return (
     <div className="relative">
       <Image
@@ -20,7 +21,10 @@ export default function BeskrivPage() {
           </h1>
         </header>
         <section className="flex flex-col justify-center items-center">
-          <AddObservationForm />
+          <AddObservationForm
+            beings={await getBeings()}
+            municipalities={await getMunicipalities()}
+          />
         </section>
       </div>
     </div>

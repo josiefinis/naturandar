@@ -24,7 +24,7 @@ export interface Observation {
 
 export interface NewObservation {
   beingId: number;
-  date: string;
+  date: Date;
   municipalityId: string;
   habitat?: string;
   behaviour?: string;
