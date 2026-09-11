@@ -2,7 +2,7 @@
 
 import z from "zod";
 import { createObservation } from "@/lib/api";
-import { ObservationSchema } from "@/lib/schemas";
+import { getObservationSchema } from "@/lib/schemas";
 import { NewObservation } from "@/lib/types";
 import { revalidatePath } from "next/cache";
 
@@ -26,7 +26,7 @@ export async function createObservationAction(
   formData: FormData,
 ) {
   const rawData: RawData = Object.fromEntries(formData);
-  const validatedFields = ObservationSchema.safeParse(rawData);
+  const validatedFields = getObservationSchema().safeParse(rawData);
   if (!validatedFields.success) {
     const flattened = z.flattenError(validatedFields.error);
 
