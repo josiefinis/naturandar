@@ -7,6 +7,7 @@ import { useActionState } from "react";
 import Link from "next/link";
 import SubmitButton from "./submit-button";
 import { shortDateTime } from "@/lib/utils";
+import PoliteMessage from "./polite-message";
 
 const initialState: FormState = {};
 
@@ -34,6 +35,7 @@ export default function AddObservationForm({
       className="flex flex-col gap-8 bg-theme-300 text-theme-900 text-fluid-xl m-8 p-8 border border-theme-500 rounded-lg shadow-xl"
       action={formAction}
       key={JSON.stringify(rawData)}
+      noValidate
     >
       <div className={groupStyle}>
         <label htmlFor="being" className={labelStyle}>
@@ -44,7 +46,8 @@ export default function AddObservationForm({
           id="being"
           name="beingId"
           defaultValue={beingId ?? -1}
-          //required
+          aria-invalid={Boolean(state.errors?.beingId)}
+          required
         >
           <option value={-1} disabled>
             Välj ett alternativ
@@ -55,7 +58,11 @@ export default function AddObservationForm({
             </option>
           ))}
         </select>
+        <span className="error-message text-fluid-lg text-accent-red-700">
+          {state.errors?.beingId}
+        </span>
       </div>
+
       <div className={groupStyle}>
         <label htmlFor="date" className={labelStyle}>
           Datum
@@ -64,12 +71,17 @@ export default function AddObservationForm({
           className={inputStyle}
           id="date"
           name="date"
-          required
           defaultValue={date}
+          required
           type="datetime-local"
+          aria-invalid={Boolean(state.errors?.date)}
           max={shortDateTime.format(new Date())}
         />
+        <span className="error-message text-fluid-lg text-accent-red-700">
+          {state.errors?.date}
+        </span>
       </div>
+
       <div className={groupStyle}>
         <label htmlFor="place" className={labelStyle}>
           Ort
@@ -78,8 +90,9 @@ export default function AddObservationForm({
           className={`${inputStyle} py-2`}
           id="place"
           name="municipalityId"
-          required
           defaultValue={municipalityId ?? ""}
+          aria-invalid={Boolean(state.errors?.municipalityId)}
+          required
         >
           <option value="" disabled>
             Välj ett alternativ
@@ -90,7 +103,11 @@ export default function AddObservationForm({
             </option>
           ))}
         </select>
+        <span className="error-message text-fluid-lg text-accent-red-700">
+          {state.errors?.municipalityId}
+        </span>
       </div>
+
       <div className={groupStyle}>
         <label htmlFor="habitat" className={labelStyle}>
           Habitat
@@ -99,11 +116,16 @@ export default function AddObservationForm({
           className={inputStyle}
           id="habitat"
           name="habitat"
-          maxLength={20}
           defaultValue={habitat ?? ""}
           placeholder="t.ex. fjäll, strand, svämlövskog"
+          aria-invalid={Boolean(state.errors?.habitat)}
+          maxLength={20}
         />
+        <span className="error-message text-fluid-lg text-accent-red-700">
+          {state.errors?.habitat}
+        </span>
       </div>
+
       <div className="flex flex-col text-fluid-lg">
         <label htmlFor="behaviour" className={labelStyle}>
           Beteende
@@ -112,10 +134,15 @@ export default function AddObservationForm({
           className={inputStyle}
           id="behaviour"
           name="behaviour"
-          maxLength={120}
           defaultValue={behaviour ?? ""}
+          aria-invalid={Boolean(state.errors?.behaviour)}
+          maxLength={120}
         />
+        <span className="error-message text-fluid-lg text-accent-red-700">
+          {state.errors?.behaviour}
+        </span>
       </div>
+
       <div className="grid grid-cols-2 gap-4">
         <Link
           className="button text-center border-2 border-theme-900/20 rounded-lg"
@@ -125,9 +152,7 @@ export default function AddObservationForm({
         </Link>
         <SubmitButton className="button text-center border-2 border-theme-900/20 rounded-lg" />
       </div>
-      <p aria-live="polite" className="text-fluid-lg text-center">
-        {state?.error}
-      </p>
+      <PoliteMessage message={state?.message} />
     </form>
   );
 }
