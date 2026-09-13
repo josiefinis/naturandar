@@ -4,6 +4,7 @@ import "./globals.css";
 import MainNav from "@/components/main-nav";
 import SkipLink from "@/components/skip-link";
 import Footer from "@/components/footer";
+import MainContent from "@/components/main-content";
 
 const amarante = Amarante({
   variable: "--font-amarante",
@@ -33,7 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <header>
           <MainNav />
         </header>
-        <main id="main-content">{children}</main>
+        <MainContent>{children}</MainContent>
         <Footer />
       </body>
     </html>
