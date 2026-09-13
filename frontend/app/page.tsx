@@ -19,6 +19,14 @@ export default async function Home({
     expand: ["being", "municipality"],
   });
 
+  const colStartXl = [
+    "xl:col-start-1",
+    "xl:col-start-3",
+    "xl:col-start-5",
+    "xl:col-start-2",
+    "xl:col-start-4",
+  ];
+
   return (
     <div className="relative min-block-svh ">
       <header className="relative mx-fluid">
@@ -40,9 +48,14 @@ export default async function Home({
         fill
       />
       <section className="mx-fluid-xl">
-        <div className="min-block-svh grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16 my-16">
-          {observations.map((obs) => (
-            <ObservationCard key={obs.id} observation={obs} />
+        <div className="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-6 gap-16 my-16">
+          {observations.map((obs, index) => (
+            <div
+              key={obs.id}
+              className={`col-span-1 md:col-span-2 xl:col-span-2 ${colStartXl[index % 5]}`}
+            >
+              <ObservationCard observation={obs} />
+            </div>
           ))}
         </div>
         <Pagination query={query} last={pages} />
