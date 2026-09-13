@@ -2,8 +2,17 @@ import Image from "next/image";
 import plume from "@/public/plume.jpg";
 import AddObservationForm from "@/components/add-observation-form";
 import { getBeings, getMunicipalities } from "@/lib/api";
+import { Being, Municipality, MunicipalityGroup } from "@/lib/types";
+import { groupMunicipalities } from "@/lib/utils";
 
 export default async function BeskrivPage() {
+  const beings: Being[] = await getBeings();
+  const municipalities: Municipality[] = await getMunicipalities({
+    sort: "id",
+  });
+  const municipalityGroups: MunicipalityGroup[] =
+    groupMunicipalities(municipalities);
+
   return (
     <div className="relative">
       <Image
@@ -22,8 +31,8 @@ export default async function BeskrivPage() {
         </header>
         <section className="flex flex-col justify-center items-center">
           <AddObservationForm
-            beings={await getBeings()}
-            municipalities={await getMunicipalities()}
+            beings={beings}
+            municipalities={municipalityGroups}
           />
         </section>
       </div>

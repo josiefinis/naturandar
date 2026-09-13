@@ -10,6 +10,11 @@ export interface Municipality {
   type: string;
 }
 
+export interface MunicipalityGroup {
+  region: Municipality;
+  municipalities: Municipality[];
+}
+
 export interface Observation {
   id: number;
   beingId: number;

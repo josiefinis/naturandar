@@ -1,7 +1,7 @@
 "use client";
 
 import type { FormState, RawData } from "@/app/iakttagelser/actions";
-import type { Being, Municipality } from "@/lib/types";
+import type { Being, Municipality, MunicipalityGroup } from "@/lib/types";
 import { createObservationAction } from "@/app/iakttagelser/actions";
 import { useActionState } from "react";
 import Link from "next/link";
@@ -13,7 +13,7 @@ const initialState: FormState = {};
 
 interface AddObservationFormProps {
   beings: Being[];
-  municipalities: Municipality[];
+  municipalities: MunicipalityGroup[];
 }
 export default function AddObservationForm({
   beings,
@@ -97,10 +97,18 @@ export default function AddObservationForm({
           <option value="" disabled>
             Välj ett alternativ
           </option>
-          {municipalities.map((m: Municipality) => (
-            <option key={m.id} value={m.id}>
-              {m.title}
-            </option>
+          {municipalities.map((group: MunicipalityGroup) => (
+            <optgroup
+              className="font-medium font-display"
+              key={group.region.id}
+              label={group.region.title}
+            >
+              {group.municipalities.map((m: Municipality) => (
+                <option className="font-serif" key={m.id} value={m.id}>
+                  {m.title}
+                </option>
+              ))}
+            </optgroup>
           ))}
         </select>
         <span className="error-message text-fluid-lg text-accent-red-700">
