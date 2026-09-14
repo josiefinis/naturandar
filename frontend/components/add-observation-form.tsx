@@ -71,11 +71,11 @@ export default function AddObservationForm({
           className={inputStyle}
           id="date"
           name="date"
-          defaultValue={date}
-          required
           type="datetime-local"
+          defaultValue={date}
           aria-invalid={Boolean(state.errors?.date)}
           max={shortDateTime.format(new Date())}
+          required
         />
         <span className="error-message text-fluid-lg text-accent-red-700">
           {state.errors?.date}
@@ -99,12 +99,12 @@ export default function AddObservationForm({
           </option>
           {municipalities.map((group: MunicipalityGroup) => (
             <optgroup
-              className="font-medium font-display"
               key={group.region.id}
+              className="font-medium font-display"
               label={group.region.title}
             >
               {group.municipalities.map((m: Municipality) => (
-                <option className="font-serif" key={m.id} value={m.id}>
+                <option key={m.id} className="font-serif" value={m.id}>
                   {m.title}
                 </option>
               ))}
