@@ -36,7 +36,7 @@ export default function AddObservationForm({
       messageRef.current?.focus();
       window.scrollTo({ top: messageRef.current?.offsetTop });
     }
-  }, [state?.timestamp]);
+  }, [state?.message, state?.timestamp]);
 
   return (
     <form
