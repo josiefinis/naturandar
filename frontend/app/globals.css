@@ -96,6 +96,19 @@ body {
   }
 }
 
+.error-message {
+  visibility: hidden;
+}
+
+[aria-invalid="true"] {
+  background-color: var(--color-accent-yellow);
+  outline: 2px solid var(--color-accent-red-700);
+}
+
+[aria-invalid="true"] ~ .error-message {
+  visibility: visible;
+}
+
 .mx-fluid {
   margin-inline: clamp(1rem, 4cqi, 6rem);
 }

@@ -32,3 +32,11 @@ export const longDateTime = Intl.DateTimeFormat("sv-SE", {
   hour: "numeric",
   minute: "numeric",
 });
+
+export const shortDateTime = Intl.DateTimeFormat("sv-SE", {
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+});

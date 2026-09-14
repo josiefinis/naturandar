@@ -3,7 +3,7 @@ const url = require("url");
 module.exports = (req, res, next) => {
     // if the request method is POST
     if (req.method === 'POST') {
-        const requiredFields = ['title', 'date', 'municipalityId'];
+        const requiredFields = ['beingId', 'date', 'municipalityId'];
         const missingFields = requiredFields.filter(field => !req.body || !req.body[field]);
 
         if (missingFields.length > 0) {

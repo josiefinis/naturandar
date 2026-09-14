@@ -18,7 +18,6 @@ export default async function Home({
     page: page,
     expand: ["being", "municipality"],
   });
-  console.log(observations);
 
   return (
     <div className="relative min-block-svh ">
@@ -28,7 +27,7 @@ export default async function Home({
         </h1>
         <Link
           className="link text-fluid-xl text-theme-200"
-          href="/beskriv-iakttagelse"
+          href="/iakttagelser/beskriv"
         >
           beskriv din iakttagelse
         </Link>

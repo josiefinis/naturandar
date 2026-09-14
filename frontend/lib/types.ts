@@ -22,6 +22,15 @@ export interface Observation {
   municipality?: Municipality;
 }
 
+export interface NewObservation {
+  beingId: number;
+  date: Date;
+  municipalityId: string;
+  habitat?: string;
+  behaviour?: string;
+  image?: string;
+}
+
 export interface ObservationsResponse {
   observations: Observation[];
   total: number;

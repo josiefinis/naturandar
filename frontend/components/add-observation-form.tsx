@@ -1,16 +1,42 @@
-import { getBeings, getMunicipalities } from "@/lib/api";
-import type { Being, Municipality } from "@/lib/types";
-import Link from "next/link";
+"use client";
 
-export default async function AddObservationForm() {
+import type { FormState, RawData } from "@/app/iakttagelser/actions";
+import type { Being, Municipality } from "@/lib/types";
+import { createObservationAction } from "@/app/iakttagelser/actions";
+import { useActionState } from "react";
+import Link from "next/link";
+import SubmitButton from "./submit-button";
+import { shortDateTime } from "@/lib/utils";
+import PoliteMessage from "./polite-message";
+
+const initialState: FormState = {};
+
+interface AddObservationFormProps {
+  beings: Being[];
+  municipalities: Municipality[];
+}
+export default function AddObservationForm({
+  beings,
+  municipalities,
+}: AddObservationFormProps) {
   const groupStyle = "flex flex-col";
   const labelStyle = "text-fluid-lg px-2";
   const inputStyle = "input px-2 rounded";
-  const beings: Being[] = await getBeings();
-  const municipalities: Municipality[] = await getMunicipalities();
+
+  const [state, formAction] = useActionState(
+    createObservationAction,
+    initialState,
+  );
+  const rawData: RawData = state.rawData ?? {};
+  const { beingId, date, municipalityId, habitat, behaviour } = rawData;
 
   return (
-    <form className="flex flex-col gap-8 bg-theme-300 text-theme-900 text-fluid-xl m-8 p-8 border border-theme-500 rounded-lg shadow-xl">
+    <form
+      className="flex flex-col gap-8 bg-theme-300 text-theme-900 text-fluid-xl m-8 p-8 border border-theme-500 rounded-lg shadow-xl"
+      action={formAction}
+      key={JSON.stringify(rawData)}
+      noValidate
+    >
       <div className={groupStyle}>
         <label htmlFor="being" className={labelStyle}>
           Väsen
@@ -19,10 +45,11 @@ export default async function AddObservationForm() {
           className={`${inputStyle} py-2`}
           id="being"
           name="beingId"
-          defaultValue=""
+          defaultValue={beingId ?? -1}
+          aria-invalid={Boolean(state.errors?.beingId)}
           required
         >
-          <option value="" disabled>
+          <option value={-1} disabled>
             Välj ett alternativ
           </option>
           {beings.map((being: Being) => (
@@ -31,7 +58,11 @@ export default async function AddObservationForm() {
             </option>
           ))}
         </select>
+        <span className="error-message text-fluid-lg text-accent-red-700">
+          {state.errors?.beingId}
+        </span>
       </div>
+
       <div className={groupStyle}>
         <label htmlFor="date" className={labelStyle}>
           Datum
@@ -40,10 +71,17 @@ export default async function AddObservationForm() {
           className={inputStyle}
           id="date"
           name="date"
+          defaultValue={date}
           required
           type="datetime-local"
+          aria-invalid={Boolean(state.errors?.date)}
+          max={shortDateTime.format(new Date())}
         />
+        <span className="error-message text-fluid-lg text-accent-red-700">
+          {state.errors?.date}
+        </span>
       </div>
+
       <div className={groupStyle}>
         <label htmlFor="place" className={labelStyle}>
           Ort
@@ -52,7 +90,8 @@ export default async function AddObservationForm() {
           className={`${inputStyle} py-2`}
           id="place"
           name="municipalityId"
-          defaultValue=""
+          defaultValue={municipalityId ?? ""}
+          aria-invalid={Boolean(state.errors?.municipalityId)}
           required
         >
           <option value="" disabled>
@@ -64,7 +103,11 @@ export default async function AddObservationForm() {
             </option>
           ))}
         </select>
+        <span className="error-message text-fluid-lg text-accent-red-700">
+          {state.errors?.municipalityId}
+        </span>
       </div>
+
       <div className={groupStyle}>
         <label htmlFor="habitat" className={labelStyle}>
           Habitat
@@ -73,15 +116,33 @@ export default async function AddObservationForm() {
           className={inputStyle}
           id="habitat"
           name="habitat"
+          defaultValue={habitat ?? ""}
           placeholder="t.ex. fjäll, strand, svämlövskog"
+          aria-invalid={Boolean(state.errors?.habitat)}
+          maxLength={20}
         />
+        <span className="error-message text-fluid-lg text-accent-red-700">
+          {state.errors?.habitat}
+        </span>
       </div>
+
       <div className="flex flex-col text-fluid-lg">
         <label htmlFor="behaviour" className={labelStyle}>
           Beteende
         </label>
-        <textarea className={inputStyle} id="behaviour" name="beteende" />
+        <textarea
+          className={inputStyle}
+          id="behaviour"
+          name="behaviour"
+          defaultValue={behaviour ?? ""}
+          aria-invalid={Boolean(state.errors?.behaviour)}
+          maxLength={120}
+        />
+        <span className="error-message text-fluid-lg text-accent-red-700">
+          {state.errors?.behaviour}
+        </span>
       </div>
+
       <div className="grid grid-cols-2 gap-4">
         <Link
           className="button text-center border-2 border-theme-900/20 rounded-lg"
@@ -89,10 +150,9 @@ export default async function AddObservationForm() {
         >
           Avbryt
         </Link>
-        <button className="button text-center border-2 border-theme-900/20 rounded-lg ">
-          Skicka
-        </button>
+        <SubmitButton className="button text-center border-2 border-theme-900/20 rounded-lg" />
       </div>
+      <PoliteMessage message={state?.message} />
     </form>
   );
 }

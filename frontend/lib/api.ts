@@ -1,5 +1,12 @@
+"use server";
+
 import { ApiError } from "./errors";
-import { Being, Municipality, ObservationsResponse } from "@/lib/types";
+import {
+  Being,
+  Municipality,
+  NewObservation,
+  ObservationsResponse,
+} from "@/lib/types";
 const API_URL = "http://localhost:4000";
 const DEFAULT_LIMIT = "8";
 
@@ -7,7 +14,7 @@ async function queryApi<T>(
   endpoint: string,
   query?: URLSearchParams,
 ): Promise<T> {
-  const url = `${API_URL}/${endpoint}${query ? `?${query.toString()}` : ""}`;
+  const url = `${API_URL}${endpoint}${query ? `?${query.toString()}` : ""}`;
   const res = await fetch(url);
   if (!res.ok) {
     const context = { status: res.status, url: res.url };
@@ -16,11 +23,25 @@ async function queryApi<T>(
   return await res.json();
 }
 
+async function mutateApi<T>(
+  endpoint: string,
+  options?: RequestInit,
+): Promise<T> {
+  const url = `${API_URL}${endpoint}`;
+  const res = await fetch(url, options);
+  console.log(res);
+  if (!res.ok) {
+    const context = { status: res.status, url: res.url };
+    throw new ApiError("Fetch failed", { context: context });
+  }
+  return await res.json();
+}
+
 export async function getBeings(): Promise<Being[]> {
-  return queryApi("beings");
+  return queryApi("/beings");
 }
 export async function getMunicipalities(): Promise<Municipality[]> {
-  return queryApi("municipalities");
+  return queryApi("/municipalities");
 }
 
 interface GetObservationsOptions {
@@ -54,5 +75,13 @@ export async function getObservations(
     }
   });
 
-  return queryApi("observations", query);
+  return queryApi<ObservationsResponse>("/observations", query);
+}
+
+export async function createObservation(observation: NewObservation) {
+  mutateApi("/observations", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(observation),
+  });
 }
