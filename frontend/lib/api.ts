@@ -29,7 +29,6 @@ async function mutateApi<T>(
 ): Promise<T> {
   const url = `${API_URL}${endpoint}`;
   const res = await fetch(url, options);
-  console.log(res);
   if (!res.ok) {
     const context = { status: res.status, url: res.url };
     throw new ApiError("Fetch failed", { context: context });
@@ -40,7 +39,32 @@ async function mutateApi<T>(
 export async function getBeings(): Promise<Being[]> {
   return queryApi("/beings");
 }
-export async function getMunicipalities(): Promise<Municipality[]> {
+
+interface GetMunicipalitiesOptions {
+  sort?: string;
+  order?: string;
+  type?: string;
+  region?: string;
+}
+
+export async function getMunicipalities(
+  options: GetMunicipalitiesOptions = {},
+): Promise<Municipality[]> {
+  const query = new URLSearchParams();
+  Object.entries(options).forEach((entry) => {
+    const [key, value] = entry;
+    if (value !== "" && value !== undefined) {
+      const apiKey = ["sort", "order"].includes(key) ? `_${key}` : key;
+      query.set(apiKey, String(value));
+    }
+  });
+
+  const { region } = options;
+  if (region) {
+    const pattern = `${region.slice(2)}[0-9]{2}`;
+    query.set("id_like", pattern);
+  }
+
   return queryApi("/municipalities");
 }
 

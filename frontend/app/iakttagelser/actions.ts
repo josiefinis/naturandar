@@ -19,6 +19,7 @@ export type FormState = {
   message?: string;
   errors?: Record<string, string | string[]>;
   rawData?: RawData;
+  timestamp?: string;
 };
 
 export async function createObservationAction(
@@ -35,6 +36,7 @@ export async function createObservationAction(
       message: "Var god och fixa fel i formen.",
       errors: flattened.fieldErrors,
       rawData,
+      timestamp: Date(),
     };
     return state;
   }
@@ -47,6 +49,7 @@ export async function createObservationAction(
     const state: FormState = {
       status: "success",
       message: "Din iakttagelse har skickats.",
+      timestamp: Date(),
     };
     return state;
   } catch {
@@ -54,6 +57,7 @@ export async function createObservationAction(
       status: "error",
       message: "Något gick fel, försök igen senare.",
       rawData,
+      timestamp: Date(),
     };
     return state;
   }

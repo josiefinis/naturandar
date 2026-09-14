@@ -1,9 +1,9 @@
 "use client";
 
 import type { FormState, RawData } from "@/app/iakttagelser/actions";
-import type { Being, Municipality } from "@/lib/types";
+import type { Being, Municipality, MunicipalityGroup } from "@/lib/types";
 import { createObservationAction } from "@/app/iakttagelser/actions";
-import { useActionState } from "react";
+import { useActionState, useEffect, useRef } from "react";
 import Link from "next/link";
 import SubmitButton from "./submit-button";
 import { shortDateTime } from "@/lib/utils";
@@ -13,7 +13,7 @@ const initialState: FormState = {};
 
 interface AddObservationFormProps {
   beings: Being[];
-  municipalities: Municipality[];
+  municipalities: MunicipalityGroup[];
 }
 export default function AddObservationForm({
   beings,
@@ -29,14 +29,29 @@ export default function AddObservationForm({
   );
   const rawData: RawData = state.rawData ?? {};
   const { beingId, date, municipalityId, habitat, behaviour } = rawData;
+  const messageRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (state?.message) {
+      messageRef.current?.focus();
+      window.scrollTo({ top: messageRef.current?.offsetTop });
+    }
+  }, [state?.timestamp]);
 
   return (
     <form
       className="flex flex-col gap-8 bg-theme-300 text-theme-900 text-fluid-xl m-8 p-8 border border-theme-500 rounded-lg shadow-xl"
       action={formAction}
-      key={JSON.stringify(rawData)}
+      key={state.timestamp}
       noValidate
     >
+      <div
+        ref={messageRef}
+        tabIndex={-1}
+        className="focus-visible:outline-none"
+      >
+        <PoliteMessage message={state?.message} />
+      </div>
       <div className={groupStyle}>
         <label htmlFor="being" className={labelStyle}>
           Väsen
@@ -71,11 +86,11 @@ export default function AddObservationForm({
           className={inputStyle}
           id="date"
           name="date"
-          defaultValue={date}
-          required
           type="datetime-local"
+          defaultValue={date}
           aria-invalid={Boolean(state.errors?.date)}
           max={shortDateTime.format(new Date())}
+          required
         />
         <span className="error-message text-fluid-lg text-accent-red-700">
           {state.errors?.date}
@@ -97,10 +112,18 @@ export default function AddObservationForm({
           <option value="" disabled>
             Välj ett alternativ
           </option>
-          {municipalities.map((m: Municipality) => (
-            <option key={m.id} value={m.id}>
-              {m.title}
-            </option>
+          {municipalities.map((group: MunicipalityGroup) => (
+            <optgroup
+              key={group.region.id}
+              className="font-medium font-display"
+              label={group.region.title}
+            >
+              {group.municipalities.map((m: Municipality) => (
+                <option key={m.id} className="font-serif" value={m.id}>
+                  {m.title}
+                </option>
+              ))}
+            </optgroup>
           ))}
         </select>
         <span className="error-message text-fluid-lg text-accent-red-700">
@@ -152,7 +175,6 @@ export default function AddObservationForm({
         </Link>
         <SubmitButton className="button text-center border-2 border-theme-900/20 rounded-lg" />
       </div>
-      <PoliteMessage message={state?.message} />
     </form>
   );
 }
