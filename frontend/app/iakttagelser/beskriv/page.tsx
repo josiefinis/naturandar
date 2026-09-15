@@ -29,12 +29,12 @@ export default async function BeskrivPage() {
             Beskriv iakttagelse
           </h1>
         </header>
-        <section className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center">
           <AddObservationForm
             beings={beings}
             municipalities={municipalityGroups}
           />
-        </section>
+        </div>
       </div>
     </div>
   );
