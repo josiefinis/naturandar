@@ -3,7 +3,7 @@ import { createUrlSearchParams } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
 import chrysanthemes from "@/public/auriol-chrysanthemes.png";
-import { getObservations } from "@/lib/api";
+import { getBeings, getObservations } from "@/lib/api";
 import ObservationCard from "@/components/observation-card";
 
 export default async function Home({
@@ -13,10 +13,18 @@ export default async function Home({
 }) {
   const params = await searchParams;
   const query = createUrlSearchParams(params);
+  const element = query.get("element");
+  let beingIds;
+  if (element) {
+    const beings = await getBeings({ element });
+    beingIds = beings.map((being) => String(being.id));
+  }
+
   const { page } = params;
   const { observations, pages } = await getObservations({
     page: page,
     expand: ["being", "municipality"],
+    beingId: beingIds,
   });
 
   const colStartXl = [
