@@ -45,11 +45,7 @@ export default function AddObservationForm({
       key={state.timestamp}
       noValidate
     >
-      <div
-        ref={messageRef}
-        tabIndex={-1}
-        className="focus-visible:outline-none"
-      >
+      <div ref={messageRef} className="focus-visible:outline-none">
         <PoliteMessage message={state?.message} />
       </div>
       <div className={groupStyle}>
@@ -62,6 +58,7 @@ export default function AddObservationForm({
           name="beingId"
           defaultValue={beingId ?? -1}
           aria-invalid={Boolean(state.errors?.beingId)}
+          aria-describedby="being-description"
           required
         >
           <option value={-1} disabled>
@@ -73,7 +70,10 @@ export default function AddObservationForm({
             </option>
           ))}
         </select>
-        <span className="error-message text-fluid-lg text-accent-red-700">
+        <span
+          id="being-description"
+          className="error-message text-fluid-lg text-accent-red-700"
+        >
           {state.errors?.beingId}
         </span>
       </div>
@@ -89,10 +89,14 @@ export default function AddObservationForm({
           type="datetime-local"
           defaultValue={date}
           aria-invalid={Boolean(state.errors?.date)}
+          aria-describedby="date-description"
           max={shortDateTime.format(new Date())}
           required
         />
-        <span className="error-message text-fluid-lg text-accent-red-700">
+        <span
+          id="date-description"
+          className="error-message text-fluid-lg text-accent-red-700"
+        >
           {state.errors?.date}
         </span>
       </div>
@@ -107,6 +111,7 @@ export default function AddObservationForm({
           name="municipalityId"
           defaultValue={municipalityId ?? ""}
           aria-invalid={Boolean(state.errors?.municipalityId)}
+          aria-describedby="place-description"
           required
         >
           <option value="" disabled>
@@ -126,7 +131,10 @@ export default function AddObservationForm({
             </optgroup>
           ))}
         </select>
-        <span className="error-message text-fluid-lg text-accent-red-700">
+        <span
+          id="place-description"
+          className="error-message text-fluid-lg text-accent-red-700"
+        >
           {state.errors?.municipalityId}
         </span>
       </div>
@@ -142,9 +150,13 @@ export default function AddObservationForm({
           defaultValue={habitat ?? ""}
           placeholder="t.ex. fjäll, strand, träsk"
           aria-invalid={Boolean(state.errors?.habitat)}
+          aria-describedby="habitat-description"
           maxLength={20}
         />
-        <span className="error-message text-fluid-lg text-accent-red-700">
+        <span
+          id="habitat-description"
+          className="error-message text-fluid-lg text-accent-red-700"
+        >
           {state.errors?.habitat}
         </span>
       </div>
@@ -159,9 +171,13 @@ export default function AddObservationForm({
           name="behaviour"
           defaultValue={behaviour ?? ""}
           aria-invalid={Boolean(state.errors?.behaviour)}
+          aria-describedby="behaviour-description"
           maxLength={120}
         />
-        <span className="error-message text-fluid-lg text-accent-red-700">
+        <span
+          id="behaviour-description"
+          className="error-message text-fluid-lg text-accent-red-700"
+        >
           {state.errors?.behaviour}
         </span>
       </div>
