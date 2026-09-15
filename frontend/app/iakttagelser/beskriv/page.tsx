@@ -4,6 +4,12 @@ import AddObservationForm from "@/components/add-observation-form";
 import { getBeings, getMunicipalities } from "@/lib/api";
 import { Being, Municipality, MunicipalityGroup } from "@/lib/types";
 import { groupMunicipalities } from "@/lib/utils";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Beskriv iakttagelse",
+  description: "Använd formuläret för att beskriva din iakttagelse",
+};
 
 export default async function BeskrivPage() {
   const beings: Being[] = await getBeings();

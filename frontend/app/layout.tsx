@@ -19,7 +19,10 @@ const glassAntiqua = Glass_Antiqua({
 });
 
 export const metadata: Metadata = {
-  title: "Naturandar",
+  title: {
+    template: "%s | Naturandar",
+    default: "Naturandar",
+  },
   description: "En samling iakttagelser av naturandar",
 };
 

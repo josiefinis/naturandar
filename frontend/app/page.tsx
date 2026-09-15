@@ -13,8 +13,9 @@ export async function generateMetadata({
   searchParams: Promise<{ [key: string]: string | undefined }>;
 }): Promise<Metadata> {
   const { element } = await searchParams;
+  const title = `Naturandar${element ? ` - ${element}` : ""}`;
   return {
-    title: `Naturandar${element && " - "}${element}`,
+    title: title,
     description: "En samling iakttagelser av naturandar",
   };
 }
