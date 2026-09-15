@@ -40,7 +40,7 @@ export default function AddObservationForm({
 
   return (
     <form
-      className="flex flex-col gap-8 bg-theme-300 text-theme-900 text-fluid-xl m-8 p-8 border border-theme-500 rounded-lg shadow-xl"
+      className="min-inline-[24ch] flex flex-col gap-8 bg-theme-300 text-theme-900 text-fluid-xl m-8 p-8 border border-theme-500 rounded-lg shadow-xl"
       action={formAction}
       key={state.timestamp}
       noValidate
@@ -140,7 +140,7 @@ export default function AddObservationForm({
           id="habitat"
           name="habitat"
           defaultValue={habitat ?? ""}
-          placeholder="t.ex. fjäll, strand, svämlövskog"
+          placeholder="t.ex. fjäll, strand, träsk"
           aria-invalid={Boolean(state.errors?.habitat)}
           maxLength={20}
         />
