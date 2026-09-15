@@ -36,8 +36,20 @@ async function mutateApi<T>(
   return await res.json();
 }
 
-export async function getBeings(): Promise<Being[]> {
-  return queryApi("/beings");
+interface GetBeingsOptions {
+  element?: string;
+}
+
+export async function getBeings(
+  options: GetBeingsOptions = {},
+): Promise<Being[]> {
+  const query = new URLSearchParams();
+  const { element } = options;
+  if (element !== "" && element !== undefined) {
+    query.set("element", element);
+  }
+
+  return queryApi("/beings", query);
 }
 
 interface GetMunicipalitiesOptions {
@@ -65,7 +77,7 @@ export async function getMunicipalities(
     query.set("id_like", pattern);
   }
 
-  return queryApi("/municipalities");
+  return queryApi("/municipalities", query);
 }
 
 interface GetObservationsOptions {

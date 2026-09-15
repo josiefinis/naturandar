@@ -2,10 +2,10 @@ import Link from "next/link";
 
 const navLinks = [
   { href: "/", label: "iakttagelser" },
-  { href: "/?element=jorden", label: "jorden" },
-  { href: "/?element=vattnet", label: "vattnet" },
-  { href: "/?element=luften", label: "luften" },
-  { href: "/?element=elden", label: "elden" },
+  { href: "/?element=jord", label: "jorden" },
+  { href: "/?element=vatten", label: "vattnet" },
+  { href: "/?element=luft", label: "luften" },
+  { href: "/?element=eld", label: "elden" },
 ];
 
 export default function MainNav() {
