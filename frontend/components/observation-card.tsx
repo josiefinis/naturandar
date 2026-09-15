@@ -48,13 +48,15 @@ export default function ObservationCard({
           fill
         />
         <div className="@container inline-full">
-          <div className="grid rounded-lg text-fluid-2xl">
+          <div className="flex flex-col gap-2 rounded-lg text-fluid-2xl">
             <h2 className="text-fluid-5xl">{being?.title}</h2>
             <time className="order-first" dateTime={date.toISOString()}>
               {longDateTime.format(date)}
             </time>
             <p className="text-fluid-3xl">
-              {municipality?.title} &mdash; {habitat}
+              {municipality?.title}
+              {`${habitat ? " \u{2014} " : ""}`}
+              {`${habitat ? habitat : ""}`}
             </p>
             <p>{behaviour}</p>
           </div>
