@@ -33,11 +33,11 @@ export default function AddObservationForm({
 
   const errorMessages = state.errors ?? {};
   const {
-    beingIdMessage,
-    dateMessage,
-    municipalityIdMessage,
-    habitatMessage,
-    behaviourMessage,
+    beingId: beingIdMessage,
+    date: dateMessage,
+    municipalityId: municipalityIdMessage,
+    habitat: habitatMessage,
+    behaviour: behaviourMessage,
   } = errorMessages;
 
   const messageRef = useRef<HTMLDivElement>(null);
