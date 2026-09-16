@@ -5,6 +5,20 @@ import Image from "next/image";
 import chrysanthemes from "@/public/auriol-chrysanthemes.png";
 import { getBeings, getObservations } from "@/lib/api";
 import ObservationCard from "@/components/observation-card";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | undefined }>;
+}): Promise<Metadata> {
+  const { element } = await searchParams;
+  const title = `Naturandar${element ? ` - ${element}` : ""}`;
+  return {
+    title: title,
+    description: "En samling iakttagelser av naturandar",
+  };
+}
 
 export default async function Home({
   searchParams,
@@ -39,7 +53,8 @@ export default async function Home({
     <div className="relative min-block-svh ">
       <header className="relative mx-fluid">
         <h1 className="font-display text-fluid-4xl text-accent-yellow">
-          Naturandar
+          Naturandar{element && " - "}
+          {element}
         </h1>
         <Link
           className="link text-fluid-xl text-theme-200"

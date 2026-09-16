@@ -17,23 +17,24 @@ export default function Pagination({ query, last }: PaginationProps) {
   };
 
   return (
-    <nav className="flex justify-center items-center gap-8 bg-theme-200 text-theme-900 text-fluid-2xl">
+    <nav className="flex justify-center items-center gap-4 bg-theme-300 text-theme-900 text-fluid-2xl my-4 rounded-lg border border-theme-400">
+      <h2 className="sr-only">Sida</h2>
+      <p className="order-2 inline-[6ch] text-center">{`${current} av ${last}`}</p>
       <Link
         href={{ pathname: "/", query: href(query, previous) }}
         aria-label={`sida ${previous}`}
         scroll={false}
-        className="hover:text-accent-orange focus-visible:text-accent-orange"
+        className="order-1 hover:text-accent-orange focus-visible:text-accent-orange"
       >
-        <FleuronLeft height={40} />
+        <FleuronLeft className="size-[1em]" />
       </Link>
-      <p className="inline-[6ch] text-center">{`${current} av ${last}`}</p>
       <Link
         href={{ pathname: "/", query: href(query, next) }}
         scroll={false}
         aria-label={`sida ${next}`}
-        className="hover:text-accent-orange focus-visible:text-accent-orange"
+        className="order-3 hover:text-accent-orange focus-visible:text-accent-orange"
       >
-        <FleuronRight height={40} />
+        <FleuronRight className="size-[1em]" />
       </Link>
     </nav>
   );

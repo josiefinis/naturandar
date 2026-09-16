@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Om sidan",
+  description: "Om sidan för naturandar",
+};
+
 export default function AboutPage() {
   return (
     <div>

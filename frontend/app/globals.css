@@ -16,6 +16,7 @@
   --color-accent-green-600: oklch(0.4238 0.0466 94.96);
   --color-accent-green-500: oklch(0.4636 0.0461 94.98);
   --color-accent-green-450: oklch(0.47 0.0355 88.38);
+  --color-accent-green-400: oklch(0.56 0.0355 88.38);
   --color-accent-green-200: oklch(0.6625 0.05 89.58);
 
   --background: var(--color-theme-900);
@@ -40,6 +41,7 @@
   --color-accent-green-600: var(--color-accent-green-600);
   --color-accent-green-500: var(--color-accent-green-500);
   --color-accent-green-450: var(--color-accent-green-450);
+  --color-accent-green-400: var(--color-accent-green-400);
   --color-accent-green-200: var(--color-accent-green-200);
 
   --font-display: var(--font-amarante);
@@ -49,7 +51,7 @@
   --text-fluid-md: clamp(0.6rem, 1cqi + 0.4rem, 2rem);
   --text-fluid-lg: clamp(0.8rem, 1.2cqi + 0.4rem, 2rem);
   --text-fluid-xl: clamp(1rem, 2cqi + 0.4rem, 4rem);
-  --text-fluid-2xl: clamp(1rem, 4cqi + 0.4rem, 8rem);
+  --text-fluid-2xl: clamp(1rem, 4.8cqi + 0.4rem, 8rem);
   --text-fluid-3xl: clamp(1rem, 6cqi + 0.6rem, 12rem);
   --text-fluid-4xl: clamp(1rem, 8cqi + 0.8rem, 16rem);
   --text-fluid-5xl: clamp(2rem, 10cqi + 1rem, 20rem);

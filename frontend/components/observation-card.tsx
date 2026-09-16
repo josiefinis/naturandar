@@ -19,7 +19,7 @@ export default function ObservationCard({
   } = observation;
   const date = new Date(isoDate);
   return (
-    <article className="grid grid-rows-[3fr_4fr] bg-theme-300 text-theme-900 rounded-lg shadow-2xl border-theme-400 border p-4">
+    <article className="grid grid-rows-[3fr_4fr] bg-theme-200 text-theme-900 rounded-lg shadow-2xl border-theme-400 border p-4">
       <div className="relative aspect-4/3 flex flex-col justify-center items-center">
         <Image
           className="object-contain object-center opacity-24"
@@ -48,13 +48,15 @@ export default function ObservationCard({
           fill
         />
         <div className="@container inline-full">
-          <div className="grid rounded-lg text-fluid-2xl">
+          <div className="flex flex-col gap-2 rounded-lg text-fluid-2xl">
             <h2 className="text-fluid-5xl">{being?.title}</h2>
             <time className="order-first" dateTime={date.toISOString()}>
               {longDateTime.format(date)}
             </time>
             <p className="text-fluid-3xl">
-              {municipality?.title} &mdash; {habitat}
+              {municipality?.title}
+              {`${habitat ? " \u{2014} " : ""}`}
+              {`${habitat ? habitat : ""}`}
             </p>
             <p>{behaviour}</p>
           </div>
