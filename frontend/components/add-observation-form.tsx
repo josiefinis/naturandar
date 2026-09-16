@@ -8,6 +8,7 @@ import Link from "next/link";
 import SubmitButton from "./submit-button";
 import { shortDateTime } from "@/lib/utils";
 import PoliteMessage from "./polite-message";
+import { BEHAVIOUR_MAX_LENGTH, HABITAT_MAX_LENGTH } from "@/lib/schemas";
 
 const initialState: FormState = {};
 
@@ -160,7 +161,7 @@ export default function AddObservationForm({
           placeholder="t.ex. fjäll, strand, träsk"
           aria-invalid={Boolean(habitatMessage)}
           aria-describedby="habitat-description"
-          maxLength={20}
+          maxLength={HABITAT_MAX_LENGTH}
         />
         <span
           id="habitat-description"
@@ -181,7 +182,7 @@ export default function AddObservationForm({
           defaultValue={behaviour ?? ""}
           aria-invalid={Boolean(behaviourMessage)}
           aria-describedby="behaviour-description"
-          maxLength={120}
+          maxLength={BEHAVIOUR_MAX_LENGTH}
         />
         <span
           id="behaviour-description"

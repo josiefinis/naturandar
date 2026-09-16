@@ -1,7 +1,7 @@
 import z from "zod";
 
-const HABITAT_MAX_LENGTH = 20;
-const BEHAVIOUR_MAX_LENGTH = 120;
+export const HABITAT_MAX_LENGTH = 20;
+export const BEHAVIOUR_MAX_LENGTH = 120;
 
 const NumericField = z
   .union([z.string(), z.number()], { error: "Obligatorisk" })
