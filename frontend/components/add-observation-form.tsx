@@ -8,6 +8,7 @@ import Link from "next/link";
 import SubmitButton from "./submit-button";
 import { shortDateTime } from "@/lib/utils";
 import PoliteMessage from "./polite-message";
+import { BEHAVIOUR_MAX_LENGTH, HABITAT_MAX_LENGTH } from "@/lib/schemas";
 
 const initialState: FormState = {};
 
@@ -29,12 +30,21 @@ export default function AddObservationForm({
   );
   const rawData: RawData = state.rawData ?? {};
   const { beingId, date, municipalityId, habitat, behaviour } = rawData;
-  const messageRef = useRef<HTMLDivElement>(null);
 
+  const errorMessages = state.errors ?? {};
+  const {
+    beingIdMessage,
+    dateMessage,
+    municipalityIdMessage,
+    habitatMessage,
+    behaviourMessage,
+  } = errorMessages;
+
+  const messageRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (state?.message) {
       messageRef.current?.focus();
-      window.scrollTo({ top: messageRef.current?.offsetTop });
+      window.scrollTo({ top: messageRef.current?.offsetTop ?? 0 });
     }
   }, [state?.message, state?.timestamp]);
 
@@ -57,7 +67,7 @@ export default function AddObservationForm({
           id="being"
           name="beingId"
           defaultValue={beingId ?? -1}
-          aria-invalid={Boolean(state.errors?.beingId)}
+          aria-invalid={Boolean(beingIdMessage)}
           aria-describedby="being-description"
           required
         >
@@ -74,7 +84,7 @@ export default function AddObservationForm({
           id="being-description"
           className="error-message text-fluid-lg text-accent-red-700"
         >
-          {state.errors?.beingId}
+          {beingIdMessage}
         </span>
       </div>
 
@@ -88,7 +98,7 @@ export default function AddObservationForm({
           name="date"
           type="datetime-local"
           defaultValue={date}
-          aria-invalid={Boolean(state.errors?.date)}
+          aria-invalid={Boolean(dateMessage)}
           aria-describedby="date-description"
           max={shortDateTime.format(new Date())}
           required
@@ -97,7 +107,7 @@ export default function AddObservationForm({
           id="date-description"
           className="error-message text-fluid-lg text-accent-red-700"
         >
-          {state.errors?.date}
+          {dateMessage}
         </span>
       </div>
 
@@ -110,7 +120,7 @@ export default function AddObservationForm({
           id="place"
           name="municipalityId"
           defaultValue={municipalityId ?? ""}
-          aria-invalid={Boolean(state.errors?.municipalityId)}
+          aria-invalid={Boolean(municipalityIdMessage)}
           aria-describedby="place-description"
           required
         >
@@ -135,7 +145,7 @@ export default function AddObservationForm({
           id="place-description"
           className="error-message text-fluid-lg text-accent-red-700"
         >
-          {state.errors?.municipalityId}
+          {municipalityIdMessage}
         </span>
       </div>
 
@@ -149,15 +159,15 @@ export default function AddObservationForm({
           name="habitat"
           defaultValue={habitat ?? ""}
           placeholder="t.ex. fjäll, strand, träsk"
-          aria-invalid={Boolean(state.errors?.habitat)}
+          aria-invalid={Boolean(habitatMessage)}
           aria-describedby="habitat-description"
-          maxLength={20}
+          maxLength={HABITAT_MAX_LENGTH}
         />
         <span
           id="habitat-description"
           className="error-message text-fluid-lg text-accent-red-700"
         >
-          {state.errors?.habitat}
+          {habitatMessage}
         </span>
       </div>
 
@@ -170,15 +180,15 @@ export default function AddObservationForm({
           id="behaviour"
           name="behaviour"
           defaultValue={behaviour ?? ""}
-          aria-invalid={Boolean(state.errors?.behaviour)}
+          aria-invalid={Boolean(behaviourMessage)}
           aria-describedby="behaviour-description"
-          maxLength={120}
+          maxLength={BEHAVIOUR_MAX_LENGTH}
         />
         <span
           id="behaviour-description"
           className="error-message text-fluid-lg text-accent-red-700"
         >
-          {state.errors?.behaviour}
+          {behaviourMessage}
         </span>
       </div>
 

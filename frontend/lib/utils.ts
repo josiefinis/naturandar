@@ -54,9 +54,9 @@ export function groupMunicipalities(
 
   const groups: MunicipalityGroup[] = [];
   for (let i = regions.length - 1; i > 0; i--) {
-    const regex = new RegExp(`^${regions[i - 1].id.slice(2)}[0-9]{2}$`);
+    const regex = new RegExp(`^${regions[i - 1]?.id.slice(2)}[0-9]{2}$`);
     const group: MunicipalityGroup = {
-      region: regions[i],
+      region: regions[i] as Municipality,
       municipalities: municipalities.splice(
         municipalities.findLastIndex((m) => regex.test(m.id)) + 1,
       ),
