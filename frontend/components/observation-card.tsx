@@ -19,7 +19,7 @@ export default function ObservationCard({
   } = observation;
   const date = new Date(isoDate);
   return (
-    <article className="grid grid-rows-[3fr_4fr] bg-theme-300 text-theme-900 rounded-lg shadow-2xl border-theme-400 border p-4">
+    <article className="grid grid-rows-[3fr_4fr] bg-theme-200 text-theme-900 rounded-lg shadow-2xl border-theme-400 border p-4">
       <div className="relative aspect-4/3 flex flex-col justify-center items-center">
         <Image
           className="object-contain object-center opacity-24"

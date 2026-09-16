@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="min-block-50 px-fluid-xl py-10 bg-accent-green-450 text-fluid-xl text-theme-900">
+    <footer className="min-block-50 px-fluid-xl py-10 bg-accent-green-400 text-fluid-xl text-black">
       <nav className="flex gap-16">
         <section className="flex flex-col">
           <h2 className="font-display">Naturandar</h2>

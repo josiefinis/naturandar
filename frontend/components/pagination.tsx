@@ -17,7 +17,7 @@ export default function Pagination({ query, last }: PaginationProps) {
   };
 
   return (
-    <nav className="flex justify-center items-center gap-4 bg-theme-200 text-theme-900 text-fluid-2xl my-4 rounded-lg border border-theme-300">
+    <nav className="flex justify-center items-center gap-4 bg-theme-300 text-theme-900 text-fluid-2xl my-4 rounded-lg border border-theme-400">
       <h2 className="sr-only">Sida</h2>
       <p className="order-2 inline-[6ch] text-center">{`${current} av ${last}`}</p>
       <Link
