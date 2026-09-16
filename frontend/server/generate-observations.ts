@@ -63,7 +63,8 @@ for (let i = 0; i < NUM_ENTRIES; i++) {
     id: firstId + i,
     beingId: getRandomInt(0, beings.length),
     date: date.toISOString(),
-    municipalityId: muncicipalities[getRandomInt(0, muncicipalities.length)].id,
+    municipalityId:
+      muncicipalities[getRandomInt(0, muncicipalities.length)]?.id,
     amount: getRandomInt(1, 3) + getRandomInt(0, 2),
     habitat: habitats[getRandomInt(0, habitats.length)],
     behaviour: "",

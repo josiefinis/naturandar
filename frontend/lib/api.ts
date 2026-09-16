@@ -81,7 +81,7 @@ export async function getMunicipalities(
 }
 
 interface GetObservationsOptions {
-  page?: number | string;
+  page?: number | string | undefined;
   limit?: number | string;
   sort?: string;
   order?: string;
