@@ -28,7 +28,7 @@ An incorrectly filled form showing a validation error message.
 ## :arrow_down_small: Installation
 ```bash
 git clone git@github.com:josiefinis/naturandar.git
-cd naturandar
+cd naturandar/frontend
 npm install
 npm run dev:full
 ```
