@@ -1,1 +1,67 @@
-{ "images": [] }
+{
+  "images": [
+    {
+      "id": 0,
+      "author": "Bauer, John",
+      "title": "",
+      "year": "1911",
+      "url": "https://commons.wikimedia.org/wiki/File:John_Bauer,_1911_(cropped,_no_signature).jpg"
+    },
+    {
+      "id": 1,
+      "author": "Merian, Matthaeus",
+      "title": "",
+      "year": "innan 1650",
+      "url": "https://commons.wikimedia.org/wiki/File:Musaeum_Hermeticum_1678_p_353_Dragon_0049.JPG"
+    },
+    {
+      "id": 2,
+      "author": "MacDonald, Alistair",
+      "title": "",
+      "year": "1903",
+      "url": "https://commons.wikimedia.org/wiki/File:Alistair_K._MacDonald_-_MacDonald-97905_-.jpg"
+    },
+    {
+      "id": 3,
+      "author": "Bauer, John",
+      "title": "Moderskärlek",
+      "year": "1917",
+      "url": "https://commons.wikimedia.org/wiki/File:Modersk%C3%A4rlek_-_John_Bauer_1917.jpg"
+    },
+    {
+      "id": 4,
+      "author": "Werenskiold, Erik",
+      "title": "",
+      "year": "1895",
+      "url": "https://commons.wikimedia.org/wiki/File:Werenskiold_trolls_1895.jpg"
+    },
+    {
+      "id": 5,
+      "author": "Lafargue, Jean-Noël",
+      "title": "",
+      "year": "2005",
+      "url": "https://commons.wikimedia.org/wiki/File:Nisse_d_apres_nature_ill_jnl_fal.png"
+    },
+    {
+      "id": 6,
+      "author": "Schweninger, Carl",
+      "title": "Reich der Sirenen",
+      "year": "innan 1920",
+      "url": "https://commons.wikimedia.org/wiki/File:%22Reich_der_Sirenen%22_by_Carl_Schweninger.jpg"
+    },
+    {
+      "id": 7,
+      "author": "Kittelsen, Theodor",
+      "title": "Nøkken",
+      "year": "1904",
+      "url": "https://commons.wikimedia.org/wiki/File:%22Reich_der_Sirenen%22_by_Carl_Schweninger.jpg"
+    },
+    {
+      "id": 8,
+      "author": "Mucha, Alphonse",
+      "title": "La plume",
+      "year": "1899",
+      "url": "https://commons.wikimedia.org/wiki/File:Art_nouveau_-_Plume.jpg"
+    }
+  ]
+}
