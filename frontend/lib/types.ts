@@ -43,3 +43,11 @@ export interface ObservationsResponse {
   page: number;
   pages: number;
 }
+
+export interface Reference {
+  id: number;
+  author: string;
+  title: string;
+  year: string;
+  url: string;
+}
