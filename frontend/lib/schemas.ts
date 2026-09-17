@@ -18,7 +18,9 @@ export const getObservationSchema = () =>
         .nonnegative("Obligatorisk."),
     ),
     date: DateField.pipe(
-      z.date().max(new Date(), { error: "Välj datum som har gått." }),
+      z
+        .date()
+        .max(new Date(), { error: "Välj ett datum från en svunnen tid." }),
     ),
     municipalityId: z
       .string("Obligatorisk")
