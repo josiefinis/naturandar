@@ -25,7 +25,8 @@
       "municipalityId": "1083",
       "amount": 1,
       "habitat": "ängsgranskog",
-      "behaviour": ""
+      "behaviour": "",
+      "image": "/observations/lafargue-nisse.png"
     },
     {
       "id": 3,
@@ -34,7 +35,8 @@
       "municipalityId": "0180",
       "amount": 2,
       "habitat": "ängsgranskog",
-      "behaviour": ""
+      "behaviour": "",
+      "image": "/observations/bauer-troll.jpg"
     },
     {
       "id": 4,
@@ -188,7 +190,8 @@
       "municipalityId": "0580",
       "amount": 1,
       "habitat": "hed",
-      "behaviour": ""
+      "behaviour": "",
+      "image": "/observations/merian-drake.jpg"
     },
     {
       "id": 21,
@@ -206,7 +209,8 @@
       "municipalityId": "1281",
       "amount": 3,
       "habitat": "grotta",
-      "behaviour": ""
+      "behaviour": "",
+      "image": "/observations/bauer-lindorm.jpg"
     },
     {
       "id": 23,
@@ -242,7 +246,8 @@
       "municipalityId": "2422",
       "amount": 3,
       "habitat": "våtmark",
-      "behaviour": ""
+      "behaviour": "",
+      "image": "/observations/werenskiold-trolls-1895.jpg"
     },
     {
       "id": 27,
@@ -413,7 +418,8 @@
       "municipalityId": "1380",
       "amount": 2,
       "habitat": "fuktlövskog",
-      "behaviour": ""
+      "behaviour": "",
+      "image": "/observations/macdonald-siren.jpg"
     },
     {
       "id": 46,
@@ -431,7 +437,8 @@
       "municipalityId": "1257",
       "amount": 2,
       "habitat": "svämädellövskog",
-      "behaviour": ""
+      "behaviour": "",
+      "image": "/observations/boecklin-fafner.jpg"
     },
     {
       "id": 48,
@@ -1304,7 +1311,8 @@
       "municipalityId": "0126",
       "amount": 2,
       "habitat": "fjällbjörkskog",
-      "behaviour": ""
+      "behaviour": "",
+      "image": "/observations/carl-siren.jpg"
     }
   ],
   "beings": [
@@ -1338,7 +1346,7 @@
     { "id": 27, "title": "flodnymf", "element": "vatten" },
     { "id": 28, "title": "källnymf", "element": "vatten" },
     { "id": 29, "title": "nixa", "element": "vatten" },
-    { "id": 30, "title": "siren", "element": "vaten" },
+    { "id": 30, "title": "siren", "element": "vatten" },
     { "id": 31, "title": "näck", "element": "vatten" },
     { "id": 32, "title": "stormande", "element": "luft" },
     { "id": 33, "title": "drake", "element": "eld" },
