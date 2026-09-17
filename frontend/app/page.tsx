@@ -1,4 +1,4 @@
-import Pagination from "@/components/pagination";
+import Pagination from "@/components/navigation/pagination";
 import { createUrlSearchParams } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
