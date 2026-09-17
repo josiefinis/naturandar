@@ -24,7 +24,7 @@ export default function Pagination({ query, last }: PaginationProps) {
         href={{ pathname: "/", query: href(query, previous) }}
         aria-label={`sida ${previous}`}
         scroll={false}
-        className="order-1 hover:text-accent-orange focus-visible:text-accent-orange"
+        className="order-1 hover:text-accent-orange focus-visible:text-accent-orange focus-visible:outline-none"
       >
         <FleuronLeft className="size-[1em]" />
       </Link>
@@ -32,7 +32,7 @@ export default function Pagination({ query, last }: PaginationProps) {
         href={{ pathname: "/", query: href(query, next) }}
         scroll={false}
         aria-label={`sida ${next}`}
-        className="order-3 hover:text-accent-orange focus-visible:text-accent-orange"
+        className="order-3 hover:text-accent-orange focus-visible:text-accent-orange focus-visible:outline-none"
       >
         <FleuronRight className="size-[1em]" />
       </Link>
