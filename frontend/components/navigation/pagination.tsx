@@ -1,6 +1,6 @@
 import Link from "next/link";
-import FleuronLeft from "./fleuron-left";
-import FleuronRight from "./fleuron-right";
+import FleuronLeft from "@/components/svg/fleuron-left";
+import FleuronRight from "@/components/svg/fleuron-right";
 
 interface PaginationProps {
   query: URLSearchParams;

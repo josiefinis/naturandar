@@ -1,6 +1,6 @@
 import Image from "next/image";
 import plume from "@/public/plume.jpg";
-import AddObservationForm from "@/components/add-observation-form";
+import AddObservationForm from "@/components/forms/add-observation-form";
 import { getBeings, getMunicipalities } from "@/lib/api";
 import { Being, Municipality, MunicipalityGroup } from "@/lib/types";
 import { groupMunicipalities } from "@/lib/utils";

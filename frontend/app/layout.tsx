@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Amarante, Glass_Antiqua } from "next/font/google";
 import "./globals.css";
-import MainNav from "@/components/main-nav";
-import SkipLink from "@/components/skip-link";
-import Footer from "@/components/footer";
+import MainNav from "@/components/navigation/main-nav";
+import SkipLink from "@/components/navigation/skip-link";
+import Footer from "@/components/navigation/footer";
 import MainContent from "@/components/main-content";
 
 const amarante = Amarante({
